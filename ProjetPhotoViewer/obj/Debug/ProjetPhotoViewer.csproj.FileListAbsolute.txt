@@ -1,0 +1,8 @@
+C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.exe.config
+C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.exe
+C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.pdb
+C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.Form1.resources
+C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.Properties.Resources.resources
+C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csproj.GenerateResource.Cache
+C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.exe
+C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.pdb
