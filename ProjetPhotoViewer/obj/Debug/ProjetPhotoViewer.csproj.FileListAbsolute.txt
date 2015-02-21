@@ -6,3 +6,4 @@ C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPho
 C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csproj.GenerateResource.Cache
 C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.exe
 C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.pdb
+C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csprojResolveAssemblyReference.cache

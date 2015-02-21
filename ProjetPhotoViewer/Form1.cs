@@ -8,18 +8,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace ProjetPhotoViewer
 {
 
     public partial class Form1 : Form
     {
+        List<album> mesalbums;
+        public static List<album> LoadXmlFile()
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<album>));
+            string path = Environment.CurrentDirectory + @"\studentslist.xml";
+            try
+            {
+                //XmlSerializer xs = new XmlSerializer(typeof(List<Student>));
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    return xs.Deserialize(sr) as List<album>;
+                }
+            }
+            catch (IOException ioe)
+            {
+                Console.WriteLine(ioe.ToString());
+            }
+            catch
+            {
+                return new List<album>();
+            }
+
+            return new List<album>();
+        }
+        //Sauvegarde de la List<Student> dans le fichier studentslist.xml
+        public static void SaveXmlFile(List<album> students)
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<album>));
+            string path = Environment.CurrentDirectory + @"\studentslist.xml";
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                xs.Serialize(sw, students);
+            }
+        }
         public Form1()
         {
+            mesalbums = new List<album>();
             InitializeComponent();
             listViewFolder.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             this.AllowDrop = true;
-            //album monalbum = new album();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,6 +93,7 @@ namespace ProjetPhotoViewer
             if(openFileDialog1.ShowDialog()==DialogResult.OK)
             {
                 album monalbum = new album();
+                
                 monalbum.name = "album 1";
                 monalbum.images.Add(openFileDialog1.FileName);
                 foreach(string str in monalbum.images)
@@ -66,12 +103,13 @@ namespace ProjetPhotoViewer
                     pb.SizeMode = PictureBoxSizeMode.StretchImage;
                     flpAlbumViewer.Controls.Add(pb);
                 }
+                mesalbums.Add(monalbum);
             }
         }
 
         private void btnLoadAlbum_Click(object sender, EventArgs e)
         {
-            //foreach(string str in )
+            SaveXmlFile(mesalbums);
         }
 
     }

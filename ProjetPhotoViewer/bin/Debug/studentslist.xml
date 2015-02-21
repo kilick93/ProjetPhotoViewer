@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAlbum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <album>
+    <images>
+      <string>C:\Users\Robin\Desktop\screenshots\Hearthstone_Screenshot_12.29.2014.17.49.41.png</string>
+    </images>
+    <name>album 1</name>
+  </album>
+  <album>
+    <images>
+      <string>C:\Users\Robin\Desktop\screenshots\Hearthstone_Screenshot_12.15.2014.23.00.08.png</string>
+    </images>
+    <name>album 1</name>
+  </album>
+  <album>
+    <images>
+      <string>C:\Users\Robin\Desktop\screenshots\Hearthstone_Screenshot_11.27.2014.21.25.13.png</string>
+    </images>
+    <name>album 1</name>
+  </album>
+</ArrayOfAlbum>
