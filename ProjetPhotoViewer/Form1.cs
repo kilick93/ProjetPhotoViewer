@@ -108,8 +108,19 @@ namespace ProjetPhotoViewer
         }
 
         private void btnLoadAlbum_Click(object sender, EventArgs e)
+        {           SaveXmlFile(mesalbums);
+        }
+
+        private void btnCreateAlbum_Click(object sender, EventArgs e)
         {
-            SaveXmlFile(mesalbums);
+            createAlbum createA = new createAlbum();
+            if(createA.ShowDialog() == DialogResult.OK)
+            {
+                album a = new album();
+                a.name = createA.album.name;
+                mesalbums.Add(a);
+
+            }
         }
 
     }

@@ -31,11 +31,11 @@
             this.listViewFolder = new System.Windows.Forms.ListView();
             this.columnFilename = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
-            this.btnChooseFolder = new System.Windows.Forms.Button();
             this.btnAddtoAlbum = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnLoadAlbum = new System.Windows.Forms.Button();
             this.flpAlbumViewer = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCreateAlbum = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewFolder
@@ -53,16 +53,6 @@
             // columnFilename
             // 
             this.columnFilename.Text = "Filename";
-            // 
-            // btnChooseFolder
-            // 
-            this.btnChooseFolder.Location = new System.Drawing.Point(47, 389);
-            this.btnChooseFolder.Name = "btnChooseFolder";
-            this.btnChooseFolder.Size = new System.Drawing.Size(87, 23);
-            this.btnChooseFolder.TabIndex = 0;
-            this.btnChooseFolder.Text = "Choose folder";
-            this.btnChooseFolder.UseVisualStyleBackColor = true;
-            this.btnChooseFolder.Click += new System.EventHandler(this.btnChooseFolder_Click);
             // 
             // btnAddtoAlbum
             // 
@@ -95,15 +85,27 @@
             this.flpAlbumViewer.Size = new System.Drawing.Size(497, 370);
             this.flpAlbumViewer.TabIndex = 4;
             // 
+            // btnCreateAlbum
+            // 
+            this.btnCreateAlbum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCreateAlbum.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnCreateAlbum.Location = new System.Drawing.Point(13, 388);
+            this.btnCreateAlbum.Name = "btnCreateAlbum";
+            this.btnCreateAlbum.Size = new System.Drawing.Size(121, 23);
+            this.btnCreateAlbum.TabIndex = 5;
+            this.btnCreateAlbum.Text = "Create Album";
+            this.btnCreateAlbum.UseVisualStyleBackColor = true;
+            this.btnCreateAlbum.Click += new System.EventHandler(this.btnCreateAlbum_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 423);
+            this.Controls.Add(this.btnCreateAlbum);
             this.Controls.Add(this.flpAlbumViewer);
             this.Controls.Add(this.btnLoadAlbum);
             this.Controls.Add(this.btnAddtoAlbum);
-            this.Controls.Add(this.btnChooseFolder);
             this.Controls.Add(this.listViewFolder);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -116,12 +118,12 @@
 
         private System.Windows.Forms.ListView listViewFolder;
         private System.Windows.Forms.FolderBrowserDialog folderBrowser;
-        private System.Windows.Forms.Button btnChooseFolder;
         private System.Windows.Forms.ColumnHeader columnFilename;
         private System.Windows.Forms.Button btnAddtoAlbum;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnLoadAlbum;
         private System.Windows.Forms.FlowLayoutPanel flpAlbumViewer;
+        private System.Windows.Forms.Button btnCreateAlbum;
     }
 }
 
