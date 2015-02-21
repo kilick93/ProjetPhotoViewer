@@ -53,7 +53,7 @@ namespace ProjetPhotoViewer
         {
             mesalbums = new List<album>();
             InitializeComponent();
-            listViewFolder.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewAlbum.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             this.AllowDrop = true;
 
         }
@@ -73,16 +73,15 @@ namespace ProjetPhotoViewer
                
             if(folderBrowser.ShowDialog() == DialogResult.OK)
             {
-                listViewFolder.Items.Clear();
+                listViewAlbum.Items.Clear();
                 string[] files = Directory.GetFiles(folderBrowser.SelectedPath);
-                foreach (string file in files)
+                foreach (album album in mesalbums)
                 {
-
-                    string fileName = Path.GetFileName(file);
+                    string fileName = album.name;
                     ListViewItem item = new ListViewItem(fileName);
-                    item.Tag = file;
+                    //item.Tag = file;
                     item.Text = fileName;
-                    listViewFolder.Items.Add(item);
+                    listViewAlbum.Items.Add(item);
                 }
             }
 
@@ -111,6 +110,7 @@ namespace ProjetPhotoViewer
         {           SaveXmlFile(mesalbums);
         }
 
+        //Ouverture d'un formulaire pour créer un nouvel album
         private void btnCreateAlbum_Click(object sender, EventArgs e)
         {
             createAlbum createA = new createAlbum();
@@ -119,7 +119,16 @@ namespace ProjetPhotoViewer
                 album a = new album();
                 a.name = createA.album.name;
                 mesalbums.Add(a);
-
+                listViewAlbum.Items.Clear();
+                //string[] files = Directory.GetFiles(folderBrowser.SelectedPath);
+                foreach (album album in mesalbums)
+                {
+                    string fileName = album.name;
+                    ListViewItem item = new ListViewItem(fileName);
+                    //item.Tag = file;
+                    item.Text = fileName;
+                    listViewAlbum.Items.Add(item);
+                }
             }
         }
 

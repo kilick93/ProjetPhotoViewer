@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listViewFolder = new System.Windows.Forms.ListView();
+            this.listViewAlbum = new System.Windows.Forms.ListView();
             this.columnFilename = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.btnAddtoAlbum = new System.Windows.Forms.Button();
@@ -38,17 +38,17 @@
             this.btnCreateAlbum = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listViewFolder
+            // listViewAlbum
             // 
-            this.listViewFolder.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewAlbum.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnFilename});
-            this.listViewFolder.Location = new System.Drawing.Point(13, 13);
-            this.listViewFolder.Name = "listViewFolder";
-            this.listViewFolder.Size = new System.Drawing.Size(121, 370);
-            this.listViewFolder.TabIndex = 0;
-            this.listViewFolder.UseCompatibleStateImageBehavior = false;
-            this.listViewFolder.View = System.Windows.Forms.View.List;
-            this.listViewFolder.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listViewAlbum.Location = new System.Drawing.Point(13, 13);
+            this.listViewAlbum.Name = "listViewAlbum";
+            this.listViewAlbum.Size = new System.Drawing.Size(121, 370);
+            this.listViewAlbum.TabIndex = 0;
+            this.listViewAlbum.UseCompatibleStateImageBehavior = false;
+            this.listViewAlbum.View = System.Windows.Forms.View.List;
+            this.listViewAlbum.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnFilename
             // 
@@ -106,7 +106,7 @@
             this.Controls.Add(this.flpAlbumViewer);
             this.Controls.Add(this.btnLoadAlbum);
             this.Controls.Add(this.btnAddtoAlbum);
-            this.Controls.Add(this.listViewFolder);
+            this.Controls.Add(this.listViewAlbum);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -116,7 +116,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listViewFolder;
+        private System.Windows.Forms.ListView listViewAlbum;
         private System.Windows.Forms.FolderBrowserDialog folderBrowser;
         private System.Windows.Forms.ColumnHeader columnFilename;
         private System.Windows.Forms.Button btnAddtoAlbum;

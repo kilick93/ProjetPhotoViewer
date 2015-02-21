@@ -25,9 +25,11 @@ namespace ProjetPhotoViewer
 
         }
 
+        //sauvegarde de l'album avec comme nom tbNameAlbum.text
         private void btnSaveAlbum_Click(object sender, EventArgs e)
         {
-            album.name = this.tbNameALbum.Text;
+            if(this.tbNameALbum.Text != null)
+                album.name = this.tbNameALbum.Text;
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
