@@ -8,3 +8,4 @@ C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPho
 C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.pdb
 C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csprojResolveAssemblyReference.cache
 C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.createAlbum.resources
+C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.modifyAlbum.resources

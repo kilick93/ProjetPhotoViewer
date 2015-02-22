@@ -31,14 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.listViewAlbum = new System.Windows.Forms.ListView();
             this.columnFilename = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmsAlbum = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.btnAddtoAlbum = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnLoadAlbum = new System.Windows.Forms.Button();
             this.flpAlbumViewer = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCreateAlbum = new System.Windows.Forms.Button();
-            this.cmsAlbum = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.deleteAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifyAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsAlbum.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +60,21 @@
             // columnFilename
             // 
             this.columnFilename.Text = "Filename";
+            // 
+            // cmsAlbum
+            // 
+            this.cmsAlbum.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteAlbumToolStripMenuItem,
+            this.modifyAlbumToolStripMenuItem});
+            this.cmsAlbum.Name = "cmsAlbum";
+            this.cmsAlbum.Size = new System.Drawing.Size(153, 70);
+            // 
+            // deleteAlbumToolStripMenuItem
+            // 
+            this.deleteAlbumToolStripMenuItem.Name = "deleteAlbumToolStripMenuItem";
+            this.deleteAlbumToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteAlbumToolStripMenuItem.Text = "delete album";
+            this.deleteAlbumToolStripMenuItem.Click += new System.EventHandler(this.deleteAlbumToolStripMenuItem_Click);
             // 
             // btnAddtoAlbum
             // 
@@ -103,19 +119,12 @@
             this.btnCreateAlbum.UseVisualStyleBackColor = true;
             this.btnCreateAlbum.Click += new System.EventHandler(this.btnCreateAlbum_Click);
             // 
-            // cmsAlbum
+            // modifyAlbumToolStripMenuItem
             // 
-            this.cmsAlbum.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deleteAlbumToolStripMenuItem});
-            this.cmsAlbum.Name = "cmsAlbum";
-            this.cmsAlbum.Size = new System.Drawing.Size(153, 48);
-            // 
-            // deleteAlbumToolStripMenuItem
-            // 
-            this.deleteAlbumToolStripMenuItem.Name = "deleteAlbumToolStripMenuItem";
-            this.deleteAlbumToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deleteAlbumToolStripMenuItem.Text = "delete album";
-            this.deleteAlbumToolStripMenuItem.Click += new System.EventHandler(this.deleteAlbumToolStripMenuItem_Click);
+            this.modifyAlbumToolStripMenuItem.Name = "modifyAlbumToolStripMenuItem";
+            this.modifyAlbumToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modifyAlbumToolStripMenuItem.Text = "modify album";
+            this.modifyAlbumToolStripMenuItem.Click += new System.EventHandler(this.modifyAlbumToolStripMenuItem_Click_1);
             // 
             // Form1
             // 
@@ -147,6 +156,7 @@
         private System.Windows.Forms.Button btnCreateAlbum;
         private System.Windows.Forms.ContextMenuStrip cmsAlbum;
         private System.Windows.Forms.ToolStripMenuItem deleteAlbumToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifyAlbumToolStripMenuItem;
     }
 }
 

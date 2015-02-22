@@ -43,7 +43,7 @@ namespace ProjetPhotoViewer
         public static void SaveXmlFile(List<album> students)
         {
             XmlSerializer xs = new XmlSerializer(typeof(List<album>));
-            string path = Environment.CurrentDirectory + @"\studentslist.xml";
+            string path = Environment.CurrentDirectory + @"\myphotoalbum.xml";
             using (StreamWriter sw = new StreamWriter(path))
             {
                 xs.Serialize(sw, students);
@@ -107,6 +107,7 @@ namespace ProjetPhotoViewer
         }
 
         //suppression de l'album sélectionné
+
         private void deleteAlbumToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(listViewAlbum.SelectedIndices[0] >= 0)
@@ -130,6 +131,19 @@ namespace ProjetPhotoViewer
                 //item.Tag = file;
                 item.Text = fileName;
                 listViewAlbum.Items.Add(item);
+            }
+        }
+
+        private void modifyAlbumToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (listViewAlbum.SelectedIndices[0] >= 0)
+            {
+                modifyAlbum modAl = new modifyAlbum(mesalbums[listViewAlbum.SelectedIndices[0]]);
+                if (modAl.ShowDialog() == DialogResult.OK)
+                {
+                    mesalbums[listViewAlbum.SelectedIndices[0]] = modAl.album;
+                }
+                refreshAlbumView();
             }
         }
 
