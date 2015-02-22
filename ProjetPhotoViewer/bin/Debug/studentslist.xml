@@ -5,12 +5,15 @@
     <name>album 1</name>
   </album>
   <album>
-    <images>
-      <photo>
-        <path>C:\Users\Robin\Desktop\screenshots\Hearthstone_Screenshot_12.15.2014.23.00.08.png</path>
-        <rating>0</rating>
-      </photo>
-    </images>
-    <name>album 2</name>
+    <images />
+    <name>aa2</name>
+  </album>
+  <album>
+    <images />
+    <name>aa 4</name>
+  </album>
+  <album>
+    <images />
+    <name>kk</name>
   </album>
 </ArrayOfAlbum>

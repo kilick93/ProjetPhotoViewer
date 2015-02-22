@@ -101,16 +101,35 @@ namespace ProjetPhotoViewer
                 a.name = createA.album.name;
                 //ajout de l'album qui vient d'être créé à la liste mesalbums
                 mesalbums.Add(a);
-                listViewAlbum.Items.Clear();
                 //affichage de chaque album dans mesalbums dans la listviewalbum
-                foreach (album album in mesalbums)
-                {
-                    string fileName = album.name;
-                    ListViewItem item = new ListViewItem(fileName);
-                    //item.Tag = file;
-                    item.Text = fileName;
-                    listViewAlbum.Items.Add(item);
-                }
+                refreshAlbumView();
+            }
+        }
+
+        //suppression de l'album sélectionné
+        private void deleteAlbumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(listViewAlbum.SelectedIndices[0] >= 0)
+            {
+                mesalbums.RemoveAt(listViewAlbum.SelectedIndices[0]);
+                refreshAlbumView();
+            }
+        }
+
+        //affichage des albums dans la listviewalbum
+        private void refreshAlbumView()
+        {
+            //on efface tous les items déjà présents dans la listview
+            listViewAlbum.Items.Clear();
+            //on prend chaque album dans la liste mesalbums
+            foreach (album album in mesalbums)
+            {
+                //on récupère le nom de l'album et on l'ajoute dans la listview
+                string fileName = album.name;
+                ListViewItem item = new ListViewItem(fileName);
+                //item.Tag = file;
+                item.Text = fileName;
+                listViewAlbum.Items.Add(item);
             }
         }
 
