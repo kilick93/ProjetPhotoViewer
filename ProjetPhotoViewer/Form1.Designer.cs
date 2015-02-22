@@ -43,6 +43,7 @@
             this.listViewAlbum.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnFilename});
             this.listViewAlbum.Location = new System.Drawing.Point(13, 13);
+            this.listViewAlbum.MultiSelect = false;
             this.listViewAlbum.Name = "listViewAlbum";
             this.listViewAlbum.Size = new System.Drawing.Size(121, 370);
             this.listViewAlbum.TabIndex = 0;

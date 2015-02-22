@@ -10,12 +10,19 @@ namespace ProjetPhotoViewer
     {
         public string name { get; set; }
 
-        public List<string> images;
+        public List<photo> images;
 
         public album()
         {
-            images = new List<string>();
+            images = new List<photo>();
         }
+    }
+
+    public class photo
+    {
+        public string path { get; set; }
+        public int rating { get; set; }
+        public string comment { get; set; }
     }
     static class Program
     {

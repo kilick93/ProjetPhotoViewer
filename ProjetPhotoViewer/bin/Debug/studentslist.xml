@@ -2,10 +2,15 @@
 <ArrayOfAlbum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <album>
     <images />
-    <name>wtff</name>
+    <name>album 1</name>
   </album>
   <album>
-    <images />
-    <name>blabla</name>
+    <images>
+      <photo>
+        <path>C:\Users\Robin\Desktop\screenshots\Hearthstone_Screenshot_12.15.2014.23.00.08.png</path>
+        <rating>0</rating>
+      </photo>
+    </images>
+    <name>album 2</name>
   </album>
 </ArrayOfAlbum>
