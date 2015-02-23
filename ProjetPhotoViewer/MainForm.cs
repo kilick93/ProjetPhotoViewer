@@ -13,7 +13,7 @@ using System.Xml.Serialization;
 namespace ProjetPhotoViewer
 {
 
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         List<album> mesalbums;
         public static List<album> LoadXmlFile()
@@ -49,7 +49,7 @@ namespace ProjetPhotoViewer
                 xs.Serialize(sw, album);
             }
         }
-        public Form1()
+        public MainForm()
         {
             mesalbums = new List<album>();
             InitializeComponent();

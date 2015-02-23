@@ -33,7 +33,7 @@ namespace ProjetPhotoViewer
         private void showImage(photo myphoto)
         {
             Image imgtemp = Image.FromFile(myphoto.path);
-            pictureBox1.Image = imgtemp;
+            pboxDiap.Image = imgtemp;
         }
 
         private void next_photo(object sender, EventArgs e)
@@ -94,12 +94,12 @@ namespace ProjetPhotoViewer
                 timer1.Interval = 2000;
                 timer1.Start();
                 timer1.Enabled = true;
-                button3.Text = "Arretez le diaporama";
+                btnDiap.Text = "Arretez le diaporama";
             }
             else
             {
                 timer1.Enabled = false;
-                button3.Text = "Lancer le diaporama";
+                btnDiap.Text = "Lancer le diaporama";
             }
         }
 
@@ -108,11 +108,11 @@ namespace ProjetPhotoViewer
             if (!this.fullScreen.IsFullScreen)
             {
                 // Cacher les boutons et afficher les diapos en plein ecran
-                this.button1.Visible = false;
-                this.button2.Visible = false;
-                this.button3.Visible = false;
-                this.button4.Visible = false;
-                this.panel1.Dock = DockStyle.Fill;
+                this.btnPrec.Visible = false;
+                this.btnSuiv.Visible = false;
+                this.btnDiap.Visible = false;
+                this.btnFullScreen.Visible = false;
+                this.PanelDiap.Dock = DockStyle.Fill;
 
                 fullScreen.EnterFullScreen(this);
             }
@@ -125,11 +125,11 @@ namespace ProjetPhotoViewer
                 if (this.fullScreen.IsFullScreen)
                 {
                     // Reafficher les boutons et la page diapo
-                    this.button1.Visible = true;
-                    this.button2.Visible = true;
-                    this.button3.Visible = true;
-                    this.button4.Visible = true;
-                    this.panel1.Dock = DockStyle.None;
+                    this.btnPrec.Visible = true;
+                    this.btnSuiv.Visible = true;
+                    this.btnDiap.Visible = true;
+                    this.btnFullScreen.Visible = true;
+                    this.PanelDiap.Dock = DockStyle.None;
 
 
                     fullScreen.LeaveFullScreen(this);
@@ -158,7 +158,7 @@ namespace ProjetPhotoViewer
                 
                 return true;
             }
-            else if (keyData == Keys.Down)
+            else if (keyData == Keys.Down)  
             {
                 if (timer1.Enabled == true)
                 {

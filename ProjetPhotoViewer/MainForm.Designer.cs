@@ -1,6 +1,6 @@
 ﻿namespace ProjetPhotoViewer
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -40,8 +40,8 @@
             this.btnLoadAlbum = new System.Windows.Forms.Button();
             this.btnCreateAlbum = new System.Windows.Forms.Button();
             this.listViewPhoto = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnDiapo = new System.Windows.Forms.Button();
             this.cmsAlbum.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,39 +130,39 @@
             this.listViewPhoto.UseCompatibleStateImageBehavior = false;
             this.listViewPhoto.SelectedIndexChanged += new System.EventHandler(this.listViewPhoto_SelectedIndexChanged);
             // 
-            // button1
+            // btnRefresh
             // 
-            this.button1.Location = new System.Drawing.Point(345, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRefresh.Location = new System.Drawing.Point(345, 388);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 7;
+            this.btnRefresh.Text = "refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnDiapo
             // 
-            this.button2.Location = new System.Drawing.Point(426, 388);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 22);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Diaporama";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.diaporama_Click);
+            this.btnDiapo.Location = new System.Drawing.Point(426, 388);
+            this.btnDiapo.Name = "btnDiapo";
+            this.btnDiapo.Size = new System.Drawing.Size(91, 22);
+            this.btnDiapo.TabIndex = 8;
+            this.btnDiapo.Text = "Diaporama";
+            this.btnDiapo.UseVisualStyleBackColor = true;
+            this.btnDiapo.Click += new System.EventHandler(this.diaporama_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 423);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDiapo);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.listViewPhoto);
             this.Controls.Add(this.btnCreateAlbum);
             this.Controls.Add(this.btnLoadAlbum);
             this.Controls.Add(this.btnAddtoAlbum);
             this.Controls.Add(this.listViewAlbum);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.cmsAlbum.ResumeLayout(false);
@@ -183,8 +183,8 @@
         private System.Windows.Forms.ToolStripMenuItem deleteAlbumToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifyAlbumToolStripMenuItem;
         private System.Windows.Forms.ListView listViewPhoto;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnDiapo;
     }
 }
 
