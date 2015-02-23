@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfAlbum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <album>
-    <images />
-    <name>ntm zizi</name>
+    <images>
+      <photo>
+        <path>C:\Users\Robin\Desktop\screenshots\Hearthstone_Screenshot_1.18.2015.15.43.43.png</path>
+        <rating>0</rating>
+      </photo>
+      <photo>
+        <path>C:\Users\Robin\Desktop\screenshots\Hearthstone_Screenshot_11.27.2014.21.25.13.png</path>
+        <rating>0</rating>
+      </photo>
+    </images>
+    <name>blabal</name>
   </album>
 </ArrayOfAlbum>

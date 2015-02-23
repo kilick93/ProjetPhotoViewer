@@ -19,7 +19,7 @@ namespace ProjetPhotoViewer
         public static List<album> LoadXmlFile()
         {
             XmlSerializer xs = new XmlSerializer(typeof(List<album>));
-            string path = Environment.CurrentDirectory + @"\studentslist.xml";
+            string path = Environment.CurrentDirectory + @"\myphotoalbum.xml";
             try
             {
                 //XmlSerializer xs = new XmlSerializer(typeof(List<Student>));
@@ -40,13 +40,13 @@ namespace ProjetPhotoViewer
             return new List<album>();
         }
         //Sauvegarde de la List<Student> dans le fichier studentslist.xml
-        public static void SaveXmlFile(List<album> students)
+        public static void SaveXmlFile(List<album> album)
         {
             XmlSerializer xs = new XmlSerializer(typeof(List<album>));
             string path = Environment.CurrentDirectory + @"\myphotoalbum.xml";
             using (StreamWriter sw = new StreamWriter(path))
             {
-                xs.Serialize(sw, students);
+                xs.Serialize(sw, album);
             }
         }
         public Form1()
@@ -80,13 +80,15 @@ namespace ProjetPhotoViewer
                 myphoto.path = openFileDialog1.FileName;
                 mesalbums[listViewAlbum.SelectedIndices[0]].images.Add(myphoto);
                 //monalbum.images.Add(openFileDialog1.FileName);
-                foreach (photo pic in mesalbums[listViewAlbum.SelectedIndices[0]].images)
+                /*foreach (photo pic in mesalbums[listViewAlbum.SelectedIndices[0]].images)
                 {
                     PictureBox pb = new PictureBox();
                     pb.ImageLocation = pic.path;
                     pb.SizeMode = PictureBoxSizeMode.StretchImage;
-                    flpAlbumViewer.Controls.Add(pb);
-                }
+                    // A CHANGER
+                    //flpAlbumViewer.Controls.Add(pb);
+                }*/
+                refreshPhotoView();
             }
         }
 
@@ -136,6 +138,30 @@ namespace ProjetPhotoViewer
                 listViewAlbum.Items.Add(item);
             }
         }
+        private void refreshPhotoView()
+        {
+            Console.WriteLine("biaaaatch");
+            listViewPhoto.Items.Clear();
+            ImageList picture = new ImageList();
+            picture.ImageSize = new Size(56, 56);
+            int i = 0;
+            if(listViewAlbum.SelectedIndices[0] >= 0)
+            {
+                Console.WriteLine("biatch"+listViewAlbum.SelectedIndices[0]);
+                album display = mesalbums[listViewAlbum.SelectedIndices[0]];
+                foreach(photo pic in mesalbums[listViewAlbum.SelectedIndices[0]].images)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.Text = pic.path;
+                    item.ImageIndex = i;
+                    listViewPhoto.Items.Add(item);
+                    i++;
+                    Console.WriteLine(pic.path);
+                    picture.Images.Add(Image.FromFile(pic.path));
+                }
+            }
+            listViewPhoto.LargeImageList = picture;
+        }
 
         private void modifyAlbumToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -148,6 +174,16 @@ namespace ProjetPhotoViewer
                 }
                 refreshAlbumView();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            refreshPhotoView();
+        }
+
+        private void listViewPhoto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
     }
