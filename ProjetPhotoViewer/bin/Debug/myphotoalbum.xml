@@ -1,21 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfAlbum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <album>
-    <images>
-      <photo>
-        <path>C:\Users\Pascal\Pictures\2dqnbqr.jpg</path>
-        <rating>0</rating>
-      </photo>
-    </images>
-    <name>mon album</name>
-  </album>
-  <album>
-    <images>
-      <photo>
-        <path>C:\Users\Pascal\Pictures\5x8irp.jpg</path>
-        <rating>0</rating>
-      </photo>
-    </images>
-    <name>mon album2</name>
-  </album>
-</ArrayOfAlbum>
+<ArrayOfAlbum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />

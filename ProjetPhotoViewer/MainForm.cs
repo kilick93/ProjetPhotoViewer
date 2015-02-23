@@ -207,7 +207,7 @@ namespace ProjetPhotoViewer
 
         private void diaporama_Click(object sender, EventArgs e)
         {
-            if (listViewAlbum.SelectedItems.Count == 1)
+            if (listViewAlbum.SelectedItems.Count == 1 && mesalbums[listViewAlbum.SelectedIndices[0]].images.Count!=0)
             {
                 diaporama diap = new diaporama(mesalbums[listViewAlbum.SelectedIndices[0]]);
                 if (diap.ShowDialog() == DialogResult.OK)
