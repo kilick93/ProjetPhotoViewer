@@ -19,6 +19,7 @@ namespace ProjetPhotoViewer
             photo = new photo();
             photo.path = modphoto.path;
             pbPreview.ImageLocation = photo.path;
+            pbPreview.SizeMode = PictureBoxSizeMode.StretchImage;
             photo.rating = modphoto.rating;
             tbRating.Text = photo.rating.ToString();
             photo.comment = modphoto.comment;

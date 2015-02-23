@@ -120,6 +120,7 @@
             this.MinimizeBox = false;
             this.Name = "diaporama";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.diaporama_Load);
             this.PanelDiap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pboxDiap)).EndInit();
             this.ResumeLayout(false);

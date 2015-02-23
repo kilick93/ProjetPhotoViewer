@@ -174,5 +174,10 @@ namespace ProjetPhotoViewer
             else
                 return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        private void diaporama_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
