@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfAlbum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <album>
-    <images />
+    <images>
+      <photo>
+        <path>C:\Users\Philippe\Desktop\Mathieu\Marine\Studio Lenoir\_MG_2064.JPG</path>
+        <rating>0</rating>
+      </photo>
+    </images>
     <name>mon album</name>
   </album>
 </ArrayOfAlbum>

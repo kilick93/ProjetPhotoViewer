@@ -12,35 +12,40 @@ namespace ProjetPhotoViewer
 {
     public partial class diaporama : Form
     {
-        public string[] folderFile = null;
-        public int selected;
-        public int begin;
-        public int end;
+
+        // Defintions des propriétés
+
+        public int selected; // photo selectionnée
         public album monalbum;
         private FullScreen fullScreen = new FullScreen();
+
+        // Initialisation de la fenetre de diaporama
 
         public diaporama(album modalbum)
         {
             InitializeComponent();
+            // on recupère l'album selectionné en paramètre 
             monalbum = modalbum;
             selected = 0;
-            begin = 0;
-            end = monalbum.images.Count;
+            // on affiche de la première photo de la liste des photos de l'album
             showImage(monalbum.images.ElementAt(selected));
                     
         }
 
+        // Fonction d'affichage d'une photo avec son path
         private void showImage(photo myphoto)
         {
             Image imgtemp = Image.FromFile(myphoto.path);
             pboxDiap.Image = imgtemp;
         }
 
+        // Evenement clic sur Next
         private void next_photo(object sender, EventArgs e)
         {
             suivant();
         }
 
+        // Fonction pour passer à la photo suivante
         private void suivant()
         {
             if (selected == monalbum.images.Count - 1)
@@ -55,11 +60,13 @@ namespace ProjetPhotoViewer
             }
         }
 
+        // Evenement clic sur precedent
         private void prev_photo(object sender, EventArgs e)
         {
             precedent();
         }
 
+        // Fonction d'affichage de la photo précédente
         private void precedent()
         {
             if (selected == 0)
@@ -74,6 +81,7 @@ namespace ProjetPhotoViewer
             }
         }
 
+        // Fonction d'affichage des images selon le tick du timer
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (selected < monalbum.images.Count)
@@ -87,6 +95,7 @@ namespace ProjetPhotoViewer
             }
         }
 
+        // Evenement pour lancer ou desactiver le diaporama 
         private void lancerdiap(object sender, EventArgs e)
         {
             if(timer1.Enabled == false)
@@ -103,6 +112,7 @@ namespace ProjetPhotoViewer
             }
         }
 
+        // Fonction permettant l'affichage en fullscreen
         private void fullscreen_Click(object sender, EventArgs e)
         {
             if (!this.fullScreen.IsFullScreen)
@@ -118,8 +128,15 @@ namespace ProjetPhotoViewer
             }
         }
 
+        // Gestion des touches claviers :
+        // Escape : quitter plein ecran
+        // Right : photo suivante
+        // Left : photo précédente
+        // + : augmentation du timer de 100
+        // - : diminution du timer de 100
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
+            // Touche Escape
             if (keyData == Keys.Escape)
             {
                 if (this.fullScreen.IsFullScreen)
@@ -136,17 +153,23 @@ namespace ProjetPhotoViewer
                 }
                 return true;
             }
+            
+            // Touche -> Right suivant
             else if (keyData == Keys.Right)
             {
                 suivant();
                 return true;
             }
+
+            // Touche <- Left précédent
             else if (keyData == Keys.Left)
             {
                 precedent();
                 return true;
             }
-            else if (keyData == Keys.Up)
+
+            // Touche + Timer
+            else if (keyData == Keys.Add)
             {
                 if (timer1.Enabled == true)
                 {
@@ -158,7 +181,8 @@ namespace ProjetPhotoViewer
                 
                 return true;
             }
-            else if (keyData == Keys.Down)  
+            // Touche - Timer
+            else if (keyData == Keys.Subtract)  
             {
                 if (timer1.Enabled == true)
                 {
@@ -169,10 +193,13 @@ namespace ProjetPhotoViewer
                 }
                 return true;
             }
-
-
             else
                 return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void diaporama_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
