@@ -204,5 +204,29 @@ namespace ProjetPhotoViewer
             refreshPhotoView();
         }
 
+        private void modifyPhotoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("indice album : " + listViewAlbum.SelectedIndices[0]);
+            Console.WriteLine("indice photo : " + listViewPhoto.SelectedIndices[0]);
+            if(listViewAlbum.SelectedIndices[0] >= 0 && listViewPhoto.SelectedIndices[0] >= 0)
+            {
+                ModifyPhotoProperty modPic = new ModifyPhotoProperty(mesalbums[listViewAlbum.SelectedIndices[0]].images[listViewPhoto.SelectedIndices[0]]);
+                if(modPic.ShowDialog() == DialogResult.OK)
+                {
+                    mesalbums[listViewAlbum.SelectedIndices[0]].images[listViewPhoto.SelectedIndices[0]] = modPic.photo;
+                }
+               
+            }
+        }
+
+        private void deletePhotoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listViewAlbum.SelectedIndices[0] >= 0 && listViewPhoto.SelectedIndices[0] >= 0)
+            {
+                mesalbums[listViewAlbum.SelectedIndices[0]].images.RemoveAt(listViewPhoto.SelectedIndices[0]);
+            }
+            refreshPhotoView();
+        }
+
     }
 }

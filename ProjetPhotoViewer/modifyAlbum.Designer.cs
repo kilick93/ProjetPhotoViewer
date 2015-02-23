@@ -70,6 +70,7 @@
             this.Controls.Add(this.btnSaveAlbum);
             this.Name = "modifyAlbum";
             this.Text = "modifyAlbum";
+            this.Load += new System.EventHandler(this.modifyAlbum_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -28,5 +28,10 @@ namespace ProjetPhotoViewer
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void modifyAlbum_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

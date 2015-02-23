@@ -42,7 +42,11 @@
             this.listViewPhoto = new System.Windows.Forms.ListView();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDiapo = new System.Windows.Forms.Button();
+            this.cmsPhoto = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.modifyPhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deletePhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsAlbum.SuspendLayout();
+            this.cmsPhoto.SuspendLayout();
             this.SuspendLayout();
             // 
             // listViewAlbum
@@ -124,6 +128,7 @@
             // 
             // listViewPhoto
             // 
+            this.listViewPhoto.ContextMenuStrip = this.cmsPhoto;
             this.listViewPhoto.Location = new System.Drawing.Point(141, 13);
             this.listViewPhoto.Name = "listViewPhoto";
             this.listViewPhoto.Size = new System.Drawing.Size(497, 370);
@@ -151,6 +156,28 @@
             this.btnDiapo.UseVisualStyleBackColor = true;
             this.btnDiapo.Click += new System.EventHandler(this.diaporama_Click);
             // 
+            // cmsPhoto
+            // 
+            this.cmsPhoto.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modifyPhotoToolStripMenuItem,
+            this.deletePhotoToolStripMenuItem});
+            this.cmsPhoto.Name = "cmsPhoto";
+            this.cmsPhoto.Size = new System.Drawing.Size(148, 48);
+            // 
+            // modifyPhotoToolStripMenuItem
+            // 
+            this.modifyPhotoToolStripMenuItem.Name = "modifyPhotoToolStripMenuItem";
+            this.modifyPhotoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modifyPhotoToolStripMenuItem.Text = "modify photo";
+            this.modifyPhotoToolStripMenuItem.Click += new System.EventHandler(this.modifyPhotoToolStripMenuItem_Click);
+            // 
+            // deletePhotoToolStripMenuItem
+            // 
+            this.deletePhotoToolStripMenuItem.Name = "deletePhotoToolStripMenuItem";
+            this.deletePhotoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deletePhotoToolStripMenuItem.Text = "delete photo";
+            this.deletePhotoToolStripMenuItem.Click += new System.EventHandler(this.deletePhotoToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +194,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.cmsAlbum.ResumeLayout(false);
+            this.cmsPhoto.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -186,6 +214,9 @@
         private System.Windows.Forms.ListView listViewPhoto;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnDiapo;
+        private System.Windows.Forms.ContextMenuStrip cmsPhoto;
+        private System.Windows.Forms.ToolStripMenuItem modifyPhotoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deletePhotoToolStripMenuItem;
     }
 }
 
