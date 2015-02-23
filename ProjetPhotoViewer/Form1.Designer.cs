@@ -142,9 +142,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(431, 391);
+            this.button2.Location = new System.Drawing.Point(426, 388);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 19);
+            this.button2.Size = new System.Drawing.Size(91, 22);
             this.button2.TabIndex = 8;
             this.button2.Text = "Diaporama";
             this.button2.UseVisualStyleBackColor = true;

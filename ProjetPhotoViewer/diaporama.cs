@@ -17,6 +17,7 @@ namespace ProjetPhotoViewer
         public int begin;
         public int end;
         public album monalbum;
+        private FullScreen fullScreen = new FullScreen();
 
         public diaporama(album modalbum)
         {
@@ -37,6 +38,11 @@ namespace ProjetPhotoViewer
 
         private void next_photo(object sender, EventArgs e)
         {
+            suivant();
+        }
+
+        private void suivant()
+        {
             if (selected == monalbum.images.Count - 1)
             {
                 selected = 0;
@@ -50,6 +56,11 @@ namespace ProjetPhotoViewer
         }
 
         private void prev_photo(object sender, EventArgs e)
+        {
+            precedent();
+        }
+
+        private void precedent()
         {
             if (selected == 0)
             {
@@ -90,6 +101,78 @@ namespace ProjetPhotoViewer
                 timer1.Enabled = false;
                 button3.Text = "Lancer le diaporama";
             }
+        }
+
+        private void fullscreen_Click(object sender, EventArgs e)
+        {
+            if (!this.fullScreen.IsFullScreen)
+            {
+                // Cacher les boutons et afficher les diapos en plein ecran
+                this.button1.Visible = false;
+                this.button2.Visible = false;
+                this.button3.Visible = false;
+                this.button4.Visible = false;
+                this.panel1.Dock = DockStyle.Fill;
+
+                fullScreen.EnterFullScreen(this);
+            }
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                if (this.fullScreen.IsFullScreen)
+                {
+                    // Reafficher les boutons et la page diapo
+                    this.button1.Visible = true;
+                    this.button2.Visible = true;
+                    this.button3.Visible = true;
+                    this.button4.Visible = true;
+                    this.panel1.Dock = DockStyle.None;
+
+
+                    fullScreen.LeaveFullScreen(this);
+                }
+                return true;
+            }
+            else if (keyData == Keys.Right)
+            {
+                suivant();
+                return true;
+            }
+            else if (keyData == Keys.Left)
+            {
+                precedent();
+                return true;
+            }
+            else if (keyData == Keys.Up)
+            {
+                if (timer1.Enabled == true)
+                {
+                    if (timer1.Interval < 10000)
+                    {
+                        timer1.Interval = timer1.Interval + 100;
+                    }
+                }
+                
+                return true;
+            }
+            else if (keyData == Keys.Down)
+            {
+                if (timer1.Enabled == true)
+                {
+                    if (timer1.Interval > 100)
+                    {
+                        timer1.Interval = timer1.Interval - 100;
+                    }
+                }
+                return true;
+            }
+
+
+            else
+                return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }
