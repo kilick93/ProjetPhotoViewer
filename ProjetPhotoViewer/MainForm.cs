@@ -199,5 +199,10 @@ namespace ProjetPhotoViewer
             }
         }
 
+        private void listViewAlbum_Click(object sender, EventArgs e)
+        {
+            refreshPhotoView();
+        }
+
     }
 }

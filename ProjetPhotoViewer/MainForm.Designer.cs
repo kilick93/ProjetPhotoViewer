@@ -58,6 +58,7 @@
             this.listViewAlbum.UseCompatibleStateImageBehavior = false;
             this.listViewAlbum.View = System.Windows.Forms.View.List;
             this.listViewAlbum.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listViewAlbum.Click += new System.EventHandler(this.listViewAlbum_Click);
             // 
             // columnFilename
             // 
