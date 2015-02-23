@@ -14,7 +14,6 @@ C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\P
 C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.pdb
 C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.exe
 C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.pdb
-C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csprojResolveAssemblyReference.cache
 C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.createAlbum.resources
 C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.modifyAlbum.resources
 C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.Properties.Resources.resources

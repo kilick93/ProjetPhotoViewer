@@ -215,11 +215,7 @@ namespace ProjetPhotoViewer
                 btnDiapo.Enabled = false;
             }
         }
-<<<<<<< HEAD
-        //Rafraichissement de l'affichage des albums à chaque clic dans la listviewalbum
-=======
-            
->>>>>>> origin/master
+
         private void listViewAlbum_Click(object sender, EventArgs e)
         {
             refreshPhotoView();
