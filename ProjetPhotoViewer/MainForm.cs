@@ -220,7 +220,7 @@ namespace ProjetPhotoViewer
                 btnDiapo.Enabled = false;
             }
         }
-
+            
         private void listViewAlbum_Click(object sender, EventArgs e)
         {
             refreshPhotoView();
