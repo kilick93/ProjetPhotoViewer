@@ -176,7 +176,6 @@ namespace ProjetPhotoViewer
             }
         }
 
-<<<<<<< HEAD
         private void diaporama_Click(object sender, EventArgs e)
         {
             if (listViewAlbum.SelectedIndices[0] >= 0)
@@ -187,7 +186,8 @@ namespace ProjetPhotoViewer
 
                 }
             }
-=======
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             refreshPhotoView();
@@ -195,7 +195,6 @@ namespace ProjetPhotoViewer
 
         private void listViewPhoto_SelectedIndexChanged(object sender, EventArgs e)
         {
->>>>>>> origin/master
 
         }
 

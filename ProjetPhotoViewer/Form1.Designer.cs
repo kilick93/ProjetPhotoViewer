@@ -39,10 +39,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnLoadAlbum = new System.Windows.Forms.Button();
             this.btnCreateAlbum = new System.Windows.Forms.Button();
-<<<<<<< HEAD
-=======
             this.listViewPhoto = new System.Windows.Forms.ListView();
->>>>>>> origin/master
+
             this.button1 = new System.Windows.Forms.Button();
             this.cmsAlbum.SuspendLayout();
             this.SuspendLayout();
@@ -123,7 +121,6 @@
             this.btnCreateAlbum.UseVisualStyleBackColor = true;
             this.btnCreateAlbum.Click += new System.EventHandler(this.btnCreateAlbum_Click);
             // 
-<<<<<<< HEAD
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(353, 389);
@@ -133,7 +130,6 @@
             this.button1.Text = "Diaporama";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.diaporama_Click);
-=======
             // listViewPhoto
             // 
             this.listViewPhoto.Location = new System.Drawing.Point(141, 13);
@@ -152,7 +148,6 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
->>>>>>> origin/master
             // 
             // Form1
             // 
@@ -160,10 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 423);
             this.Controls.Add(this.button1);
-<<<<<<< HEAD
-=======
             this.Controls.Add(this.listViewPhoto);
->>>>>>> origin/master
             this.Controls.Add(this.btnCreateAlbum);
             this.Controls.Add(this.btnLoadAlbum);
             this.Controls.Add(this.btnAddtoAlbum);
@@ -188,10 +180,7 @@
         private System.Windows.Forms.ContextMenuStrip cmsAlbum;
         private System.Windows.Forms.ToolStripMenuItem deleteAlbumToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifyAlbumToolStripMenuItem;
-<<<<<<< HEAD
-=======
         private System.Windows.Forms.ListView listViewPhoto;
->>>>>>> origin/master
         private System.Windows.Forms.Button button1;
     }
 }
