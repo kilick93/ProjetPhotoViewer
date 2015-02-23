@@ -228,5 +228,84 @@ namespace ProjetPhotoViewer
             refreshPhotoView();
         }
 
+        private void listViewAlbum_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+
+        }
+
+        private void listViewAlbum_DragDrop(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void listViewAlbum_DragEnter(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void listViewAlbum_DragLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewAlbum_DragOver(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void listViewPhoto_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Pour ajouter des fichiers depuis l'explorer
+        /// Alors ce qui se passe :
+        /// 
+        /// Dans le DragEnter
+        /// On récupère un fichier depuis l'explorer (FileDrop)
+        /// Le type de fichier n'est pas géré
+        /// 
+        /// Dans le DragDrop
+        /// On récupère de la tableau de string les data pour chaque fichier sélectionné
+        /// on va copier le path dans myphoto.path et puis on l'envoie et enfin on refresh
+        /// 
+        /// NB : Ne pas oublier de sélectionner l'album avant de le faire ! ! ! ! ! !
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void listViewPhoto_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (string file in files)
+            {
+                //listViewPhoto.Items.Add(file);
+                photo myphoto = new photo();
+                //myphoto.path = file;
+                myphoto.path = System.IO.Path.GetFullPath(file);
+                mesalbums[listViewAlbum.SelectedIndices[0]].images.Add(myphoto);
+                refreshPhotoView();
+            }
+        }
+
+        private void listViewPhoto_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop, false) == true)
+            {
+                e.Effect = DragDropEffects.All;
+            }
+        }
+
+        private void listViewPhoto_DragLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewPhoto_DragOver(object sender, DragEventArgs e)
+        {
+
+        }
+
     }
 }

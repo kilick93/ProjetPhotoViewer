@@ -40,17 +40,18 @@
             this.btnLoadAlbum = new System.Windows.Forms.Button();
             this.btnCreateAlbum = new System.Windows.Forms.Button();
             this.listViewPhoto = new System.Windows.Forms.ListView();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnDiapo = new System.Windows.Forms.Button();
             this.cmsPhoto = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modifyPhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletePhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnDiapo = new System.Windows.Forms.Button();
             this.cmsAlbum.SuspendLayout();
             this.cmsPhoto.SuspendLayout();
             this.SuspendLayout();
             // 
             // listViewAlbum
             // 
+            this.listViewAlbum.AllowDrop = true;
             this.listViewAlbum.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnFilename});
             this.listViewAlbum.ContextMenuStrip = this.cmsAlbum;
@@ -61,8 +62,13 @@
             this.listViewAlbum.TabIndex = 0;
             this.listViewAlbum.UseCompatibleStateImageBehavior = false;
             this.listViewAlbum.View = System.Windows.Forms.View.List;
+            this.listViewAlbum.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.listViewAlbum_ItemDrag);
             this.listViewAlbum.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             this.listViewAlbum.Click += new System.EventHandler(this.listViewAlbum_Click);
+            this.listViewAlbum.DragDrop += new System.Windows.Forms.DragEventHandler(this.listViewAlbum_DragDrop);
+            this.listViewAlbum.DragEnter += new System.Windows.Forms.DragEventHandler(this.listViewAlbum_DragEnter);
+            this.listViewAlbum.DragOver += new System.Windows.Forms.DragEventHandler(this.listViewAlbum_DragOver);
+            this.listViewAlbum.DragLeave += new System.EventHandler(this.listViewAlbum_DragLeave);
             // 
             // columnFilename
             // 
@@ -128,13 +134,41 @@
             // 
             // listViewPhoto
             // 
+            this.listViewPhoto.AllowDrop = true;
             this.listViewPhoto.ContextMenuStrip = this.cmsPhoto;
             this.listViewPhoto.Location = new System.Drawing.Point(141, 13);
             this.listViewPhoto.Name = "listViewPhoto";
             this.listViewPhoto.Size = new System.Drawing.Size(497, 370);
             this.listViewPhoto.TabIndex = 6;
             this.listViewPhoto.UseCompatibleStateImageBehavior = false;
+            this.listViewPhoto.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.listViewPhoto_ItemDrag);
             this.listViewPhoto.SelectedIndexChanged += new System.EventHandler(this.listViewPhoto_SelectedIndexChanged);
+            this.listViewPhoto.DragDrop += new System.Windows.Forms.DragEventHandler(this.listViewPhoto_DragDrop);
+            this.listViewPhoto.DragEnter += new System.Windows.Forms.DragEventHandler(this.listViewPhoto_DragEnter);
+            this.listViewPhoto.DragOver += new System.Windows.Forms.DragEventHandler(this.listViewPhoto_DragOver);
+            this.listViewPhoto.DragLeave += new System.EventHandler(this.listViewPhoto_DragLeave);
+            // 
+            // cmsPhoto
+            // 
+            this.cmsPhoto.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modifyPhotoToolStripMenuItem,
+            this.deletePhotoToolStripMenuItem});
+            this.cmsPhoto.Name = "cmsPhoto";
+            this.cmsPhoto.Size = new System.Drawing.Size(148, 48);
+            // 
+            // modifyPhotoToolStripMenuItem
+            // 
+            this.modifyPhotoToolStripMenuItem.Name = "modifyPhotoToolStripMenuItem";
+            this.modifyPhotoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.modifyPhotoToolStripMenuItem.Text = "modify photo";
+            this.modifyPhotoToolStripMenuItem.Click += new System.EventHandler(this.modifyPhotoToolStripMenuItem_Click);
+            // 
+            // deletePhotoToolStripMenuItem
+            // 
+            this.deletePhotoToolStripMenuItem.Name = "deletePhotoToolStripMenuItem";
+            this.deletePhotoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.deletePhotoToolStripMenuItem.Text = "delete photo";
+            this.deletePhotoToolStripMenuItem.Click += new System.EventHandler(this.deletePhotoToolStripMenuItem_Click);
             // 
             // btnRefresh
             // 
@@ -155,28 +189,6 @@
             this.btnDiapo.Text = "Diaporama";
             this.btnDiapo.UseVisualStyleBackColor = true;
             this.btnDiapo.Click += new System.EventHandler(this.diaporama_Click);
-            // 
-            // cmsPhoto
-            // 
-            this.cmsPhoto.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modifyPhotoToolStripMenuItem,
-            this.deletePhotoToolStripMenuItem});
-            this.cmsPhoto.Name = "cmsPhoto";
-            this.cmsPhoto.Size = new System.Drawing.Size(148, 48);
-            // 
-            // modifyPhotoToolStripMenuItem
-            // 
-            this.modifyPhotoToolStripMenuItem.Name = "modifyPhotoToolStripMenuItem";
-            this.modifyPhotoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.modifyPhotoToolStripMenuItem.Text = "modify photo";
-            this.modifyPhotoToolStripMenuItem.Click += new System.EventHandler(this.modifyPhotoToolStripMenuItem_Click);
-            // 
-            // deletePhotoToolStripMenuItem
-            // 
-            this.deletePhotoToolStripMenuItem.Name = "deletePhotoToolStripMenuItem";
-            this.deletePhotoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deletePhotoToolStripMenuItem.Text = "delete photo";
-            this.deletePhotoToolStripMenuItem.Click += new System.EventHandler(this.deletePhotoToolStripMenuItem_Click);
             // 
             // MainForm
             // 
