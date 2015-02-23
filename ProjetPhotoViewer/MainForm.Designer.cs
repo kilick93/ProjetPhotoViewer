@@ -36,15 +36,13 @@
             this.modifyAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.btnAddtoAlbum = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnLoadAlbum = new System.Windows.Forms.Button();
+            this.ofdPhoto = new System.Windows.Forms.OpenFileDialog();
             this.btnCreateAlbum = new System.Windows.Forms.Button();
             this.listViewPhoto = new System.Windows.Forms.ListView();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnDiapo = new System.Windows.Forms.Button();
             this.cmsPhoto = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modifyPhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletePhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDiapo = new System.Windows.Forms.Button();
             this.cmsAlbum.SuspendLayout();
             this.cmsPhoto.SuspendLayout();
             this.SuspendLayout();
@@ -100,19 +98,9 @@
             this.btnAddtoAlbum.UseVisualStyleBackColor = true;
             this.btnAddtoAlbum.Click += new System.EventHandler(this.btnAddtoAlbum_Click);
             // 
-            // openFileDialog1
+            // ofdPhoto
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnLoadAlbum
-            // 
-            this.btnLoadAlbum.Location = new System.Drawing.Point(264, 388);
-            this.btnLoadAlbum.Name = "btnLoadAlbum";
-            this.btnLoadAlbum.Size = new System.Drawing.Size(75, 23);
-            this.btnLoadAlbum.TabIndex = 3;
-            this.btnLoadAlbum.Text = "load";
-            this.btnLoadAlbum.UseVisualStyleBackColor = true;
-            this.btnLoadAlbum.Click += new System.EventHandler(this.btnLoadAlbum_Click);
+            this.ofdPhoto.FileName = "openFileDialog1";
             // 
             // btnCreateAlbum
             // 
@@ -136,26 +124,6 @@
             this.listViewPhoto.UseCompatibleStateImageBehavior = false;
             this.listViewPhoto.SelectedIndexChanged += new System.EventHandler(this.listViewPhoto_SelectedIndexChanged);
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(345, 388);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 7;
-            this.btnRefresh.Text = "refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnDiapo
-            // 
-            this.btnDiapo.Location = new System.Drawing.Point(426, 388);
-            this.btnDiapo.Name = "btnDiapo";
-            this.btnDiapo.Size = new System.Drawing.Size(91, 22);
-            this.btnDiapo.TabIndex = 8;
-            this.btnDiapo.Text = "Diaporama";
-            this.btnDiapo.UseVisualStyleBackColor = true;
-            this.btnDiapo.Click += new System.EventHandler(this.diaporama_Click);
-            // 
             // cmsPhoto
             // 
             this.cmsPhoto.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -167,16 +135,26 @@
             // modifyPhotoToolStripMenuItem
             // 
             this.modifyPhotoToolStripMenuItem.Name = "modifyPhotoToolStripMenuItem";
-            this.modifyPhotoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modifyPhotoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.modifyPhotoToolStripMenuItem.Text = "modify photo";
             this.modifyPhotoToolStripMenuItem.Click += new System.EventHandler(this.modifyPhotoToolStripMenuItem_Click);
             // 
             // deletePhotoToolStripMenuItem
             // 
             this.deletePhotoToolStripMenuItem.Name = "deletePhotoToolStripMenuItem";
-            this.deletePhotoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deletePhotoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.deletePhotoToolStripMenuItem.Text = "delete photo";
             this.deletePhotoToolStripMenuItem.Click += new System.EventHandler(this.deletePhotoToolStripMenuItem_Click);
+            // 
+            // btnDiapo
+            // 
+            this.btnDiapo.Location = new System.Drawing.Point(264, 389);
+            this.btnDiapo.Name = "btnDiapo";
+            this.btnDiapo.Size = new System.Drawing.Size(91, 22);
+            this.btnDiapo.TabIndex = 8;
+            this.btnDiapo.Text = "Diaporama";
+            this.btnDiapo.UseVisualStyleBackColor = true;
+            this.btnDiapo.Click += new System.EventHandler(this.diaporama_Click);
             // 
             // MainForm
             // 
@@ -184,10 +162,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 423);
             this.Controls.Add(this.btnDiapo);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.listViewPhoto);
             this.Controls.Add(this.btnCreateAlbum);
-            this.Controls.Add(this.btnLoadAlbum);
             this.Controls.Add(this.btnAddtoAlbum);
             this.Controls.Add(this.listViewAlbum);
             this.Name = "MainForm";
@@ -205,14 +181,12 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowser;
         private System.Windows.Forms.ColumnHeader columnFilename;
         private System.Windows.Forms.Button btnAddtoAlbum;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnLoadAlbum;
+        private System.Windows.Forms.OpenFileDialog ofdPhoto;
         private System.Windows.Forms.Button btnCreateAlbum;
         private System.Windows.Forms.ContextMenuStrip cmsAlbum;
         private System.Windows.Forms.ToolStripMenuItem deleteAlbumToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifyAlbumToolStripMenuItem;
         private System.Windows.Forms.ListView listViewPhoto;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnDiapo;
         private System.Windows.Forms.ContextMenuStrip cmsPhoto;
         private System.Windows.Forms.ToolStripMenuItem modifyPhotoToolStripMenuItem;

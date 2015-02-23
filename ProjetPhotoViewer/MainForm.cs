@@ -16,13 +16,13 @@ namespace ProjetPhotoViewer
     public partial class MainForm : Form
     {
         List<album> mesalbums;
+        //Chargement des données sauvegardées depuis le fichier myphotoalbum.xml
         public static List<album> LoadXmlFile()
         {
             XmlSerializer xs = new XmlSerializer(typeof(List<album>));
             string path = Environment.CurrentDirectory + @"\myphotoalbum.xml";
             try
             {
-                //XmlSerializer xs = new XmlSerializer(typeof(List<Student>));
                 using (StreamReader sr = new StreamReader(path))
                 {
                     return xs.Deserialize(sr) as List<album>;
@@ -39,7 +39,7 @@ namespace ProjetPhotoViewer
 
             return new List<album>();
         }
-        //Sauvegarde de la List<Student> dans le fichier studentslist.xml
+        //Sauvegarde de la List<album> dans le fichier myphotoalbum.xml
         public static void SaveXmlFile(List<album> album)
         {
             XmlSerializer xs = new XmlSerializer(typeof(List<album>));
@@ -62,7 +62,7 @@ namespace ProjetPhotoViewer
         {
 
         }
-
+        //Désactivation des boutons diaporamas et ajout de photo si aucun album n'est sélectionné
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listViewAlbum.SelectedItems.Count == 1)
@@ -76,30 +76,24 @@ namespace ProjetPhotoViewer
                 btnDiapo.Enabled = false;
             }
         }
-
+        //ajout d'une photo à un album depuis le stockage interne de l'ordinateur
         private void btnAddtoAlbum_Click(object sender, EventArgs e)
         {
+            //si un album est sélectionné
             if (listViewAlbum.SelectedItems.Count == 1)
             {
                 btnAddtoAlbum.Enabled = true;
-                openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png";
-                openFileDialog1.InitialDirectory = @"C:\";
-                openFileDialog1.Title = "Selectionner une image";
-                if (openFileDialog1.ShowDialog() == DialogResult.OK && listViewAlbum.SelectedIndices[0] >= 0)
+                //Filtre pour ne permettre de ne sélectionner que des photos
+                ofdPhoto.Filter = "Image Files|*.jpg;*.jpeg;*.png";
+                ofdPhoto.InitialDirectory = @"C:\";
+                ofdPhoto.Title = "Selectionner une image";
+                //Après avoir choisi la photo, on l'ajoute dans l'album en enregistrant son path
+                if (ofdPhoto.ShowDialog() == DialogResult.OK && listViewAlbum.SelectedIndices[0] >= 0)
                 {
-                    //album monalbum = new album();
                     photo myphoto = new photo();
-                    myphoto.path = openFileDialog1.FileName;
+                    myphoto.path = ofdPhoto.FileName;
                     mesalbums[listViewAlbum.SelectedIndices[0]].images.Add(myphoto);
-                    //monalbum.images.Add(openFileDialog1.FileName);
-                    /*foreach (photo pic in mesalbums[listViewAlbum.SelectedIndices[0]].images)
-                    {
-                        PictureBox pb = new PictureBox();
-                        pb.ImageLocation = pic.path;
-                        pb.SizeMode = PictureBoxSizeMode.StretchImage;
-                        // A CHANGER
-                        //flpAlbumViewer.Controls.Add(pb);
-                    }*/
+                    //mise à jour de l'affichage
                     refreshPhotoView();
                 }
             }
@@ -108,10 +102,6 @@ namespace ProjetPhotoViewer
                 btnAddtoAlbum.Enabled = false;
             }
             
-        }
-
-        private void btnLoadAlbum_Click(object sender, EventArgs e)
-        {           SaveXmlFile(mesalbums);
         }
 
         //Ouverture d'un formulaire pour créer un nouvel album
@@ -130,12 +120,14 @@ namespace ProjetPhotoViewer
         }
 
         //suppression de l'album sélectionné
-
         private void deleteAlbumToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //on récupère l'indice de l'album sélectionné
             if(listViewAlbum.SelectedIndices[0] >= 0)
             {
+                //suppression
                 mesalbums.RemoveAt(listViewAlbum.SelectedIndices[0]);
+                //mise à jour de l'affichage
                 refreshAlbumView();
             }
         }
@@ -155,18 +147,21 @@ namespace ProjetPhotoViewer
                 item.Text = fileName;
                 listViewAlbum.Items.Add(item);
             }
+            SaveXmlFile(mesalbums);
         }
+        //affichage des photos dans le listviewphoto
         private void refreshPhotoView()
         {
-            Console.WriteLine("biaaaatch");
+            //on efface tout les items déjà présents
             listViewPhoto.Items.Clear();
             ImageList picture = new ImageList();
             picture.ImageSize = new Size(56, 56);
             int i = 0;
+            //Si un album est sélectionné
             if(listViewAlbum.SelectedIndices[0] >= 0)
             {
-                Console.WriteLine("biatch"+listViewAlbum.SelectedIndices[0]);
                 album display = mesalbums[listViewAlbum.SelectedIndices[0]];
+                //on prend chaque photo de l'album et on les affiche
                 foreach(photo pic in mesalbums[listViewAlbum.SelectedIndices[0]].images)
                 {
                     ListViewItem item = new ListViewItem();
@@ -179,36 +174,36 @@ namespace ProjetPhotoViewer
                 }
             }
             listViewPhoto.LargeImageList = picture;
+            SaveXmlFile(mesalbums);
         }
-
+        //Ouverture d'un form pour modifier les données d'un album
         private void modifyAlbumToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             if (listViewAlbum.SelectedIndices[0] >= 0)
             {
+                //ouverture du form
                 modifyAlbum modAl = new modifyAlbum(mesalbums[listViewAlbum.SelectedIndices[0]]);
                 if (modAl.ShowDialog() == DialogResult.OK)
                 {
+                    //récupération des données modifiées
                     mesalbums[listViewAlbum.SelectedIndices[0]] = modAl.album;
                 }
+                //mise à jour de l'affichage
                 refreshAlbumView();
             }
-        }
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            refreshPhotoView();
         }
 
         private void listViewPhoto_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
+        //Diaporama de l'album sélectionné
         private void diaporama_Click(object sender, EventArgs e)
         {
+            //Si un album est sélectionné
             if (listViewAlbum.SelectedItems.Count == 1 && mesalbums[listViewAlbum.SelectedIndices[0]].images.Count!=0)
             {
+                //On ouvre le form de diaporama
                 diaporama diap = new diaporama(mesalbums[listViewAlbum.SelectedIndices[0]]);
                 if (diap.ShowDialog() == DialogResult.OK)
                 {
@@ -220,16 +215,15 @@ namespace ProjetPhotoViewer
                 btnDiapo.Enabled = false;
             }
         }
-
+        //Rafraichissement de l'affichage des albums à chaque clic dans la listviewalbum
         private void listViewAlbum_Click(object sender, EventArgs e)
         {
             refreshPhotoView();
         }
 
+        //Ouverture d'un form pour modifier les données d'une photo(rating, comment, etc...)
         private void modifyPhotoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("indice album : " + listViewAlbum.SelectedIndices[0]);
-            Console.WriteLine("indice photo : " + listViewPhoto.SelectedIndices[0]);
             if(listViewAlbum.SelectedIndices[0] >= 0 && listViewPhoto.SelectedIndices[0] >= 0)
             {
                 ModifyPhotoProperty modPic = new ModifyPhotoProperty(mesalbums[listViewAlbum.SelectedIndices[0]].images[listViewPhoto.SelectedIndices[0]]);
@@ -240,13 +234,16 @@ namespace ProjetPhotoViewer
                
             }
         }
-
+        //Suppression d'une photo dans un album
         private void deletePhotoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Si un album et une photo sont sélectionnés
             if (listViewAlbum.SelectedIndices[0] >= 0 && listViewPhoto.SelectedIndices[0] >= 0)
             {
+                //suppression de la photo
                 mesalbums[listViewAlbum.SelectedIndices[0]].images.RemoveAt(listViewPhoto.SelectedIndices[0]);
             }
+            //Mise à jour de l'affichage
             refreshPhotoView();
         }
 
