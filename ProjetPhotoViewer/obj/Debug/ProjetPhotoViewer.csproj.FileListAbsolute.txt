@@ -9,3 +9,14 @@ C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPho
 C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csprojResolveAssemblyReference.cache
 C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.createAlbum.resources
 C:\Users\Robin\documents\visual studio 2013\Projects\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.modifyAlbum.resources
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.exe.config
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.exe
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.pdb
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.exe
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.pdb
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csprojResolveAssemblyReference.cache
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.createAlbum.resources
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.Form1.resources
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.modifyAlbum.resources
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.Properties.Resources.resources
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csproj.GenerateResource.Cache

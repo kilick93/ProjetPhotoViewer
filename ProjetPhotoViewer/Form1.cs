@@ -70,6 +70,9 @@ namespace ProjetPhotoViewer
 
         private void btnAddtoAlbum_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png";
+            openFileDialog1.InitialDirectory = @"C:\";
+            openFileDialog1.Title = "Selectionner une image";
             if(openFileDialog1.ShowDialog()==DialogResult.OK && listViewAlbum.SelectedIndices[0] >= 0)
             {
                 //album monalbum = new album();
