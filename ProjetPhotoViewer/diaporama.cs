@@ -68,19 +68,28 @@ namespace ProjetPhotoViewer
             if (selected < monalbum.images.Count)
             {
                 showImage(monalbum.images.ElementAt(selected));
+                selected++;
             }
-            else
+            if (selected == monalbum.images.Count)
             {
-                timer1.Enabled = false;
+                selected = 0;
             }
-            selected++;
         }
 
         private void lancerdiap(object sender, EventArgs e)
         {
-            timer1.Interval = 2000;
-            timer1.Start();
-            timer1.Enabled = true;
+            if(timer1.Enabled == false)
+            {
+                timer1.Interval = 2000;
+                timer1.Start();
+                timer1.Enabled = true;
+                button3.Text = "Arretez le diaporama";
+            }
+            else
+            {
+                timer1.Enabled = false;
+                button3.Text = "Lancer le diaporama";
+            }
         }
     }
 }

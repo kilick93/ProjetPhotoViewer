@@ -176,6 +176,17 @@ namespace ProjetPhotoViewer
             }
         }
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            refreshPhotoView();
+        }
+
+        private void listViewPhoto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void diaporama_Click(object sender, EventArgs e)
         {
             if (listViewAlbum.SelectedIndices[0] >= 0)
@@ -186,16 +197,6 @@ namespace ProjetPhotoViewer
 
                 }
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            refreshPhotoView();
-        }
-
-        private void listViewPhoto_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
     }
