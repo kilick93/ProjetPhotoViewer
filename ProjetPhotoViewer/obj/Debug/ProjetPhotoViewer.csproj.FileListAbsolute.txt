@@ -34,3 +34,4 @@ C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\Pr
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.Properties.Resources.resources
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csproj.GenerateResource.Cache
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.ModifyPhotoProperty.resources
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.ModifyPhotoProperty.resources

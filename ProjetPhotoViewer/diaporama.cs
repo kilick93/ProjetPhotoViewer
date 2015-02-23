@@ -146,7 +146,7 @@ namespace ProjetPhotoViewer
                 precedent();
                 return true;
             }
-            else if (keyData == Keys.Up)
+            else if (keyData == Keys.Add)
             {
                 if (timer1.Enabled == true)
                 {
@@ -158,7 +158,7 @@ namespace ProjetPhotoViewer
                 
                 return true;
             }
-            else if (keyData == Keys.Down)  
+            else if (keyData == Keys.Subtract)  
             {
                 if (timer1.Enabled == true)
                 {

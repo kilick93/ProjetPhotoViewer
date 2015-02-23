@@ -65,31 +65,49 @@ namespace ProjetPhotoViewer
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (listViewAlbum.SelectedItems.Count == 1)
+            {
+                btnAddtoAlbum.Enabled = true;
+                btnDiapo.Enabled = true;
+            }
+            else
+            {
+                btnAddtoAlbum.Enabled = false;
+                btnDiapo.Enabled = false;
+            }
         }
 
         private void btnAddtoAlbum_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png";
-            openFileDialog1.InitialDirectory = @"C:\";
-            openFileDialog1.Title = "Selectionner une image";
-            if(openFileDialog1.ShowDialog()==DialogResult.OK && listViewAlbum.SelectedIndices[0] >= 0)
+            if (listViewAlbum.SelectedItems.Count == 1)
             {
-                //album monalbum = new album();
-                photo myphoto = new photo();
-                myphoto.path = openFileDialog1.FileName;
-                mesalbums[listViewAlbum.SelectedIndices[0]].images.Add(myphoto);
-                //monalbum.images.Add(openFileDialog1.FileName);
-                /*foreach (photo pic in mesalbums[listViewAlbum.SelectedIndices[0]].images)
+                btnAddtoAlbum.Enabled = true;
+                openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png";
+                openFileDialog1.InitialDirectory = @"C:\";
+                openFileDialog1.Title = "Selectionner une image";
+                if (openFileDialog1.ShowDialog() == DialogResult.OK && listViewAlbum.SelectedIndices[0] >= 0)
                 {
-                    PictureBox pb = new PictureBox();
-                    pb.ImageLocation = pic.path;
-                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
-                    // A CHANGER
-                    //flpAlbumViewer.Controls.Add(pb);
-                }*/
-                refreshPhotoView();
+                    //album monalbum = new album();
+                    photo myphoto = new photo();
+                    myphoto.path = openFileDialog1.FileName;
+                    mesalbums[listViewAlbum.SelectedIndices[0]].images.Add(myphoto);
+                    //monalbum.images.Add(openFileDialog1.FileName);
+                    /*foreach (photo pic in mesalbums[listViewAlbum.SelectedIndices[0]].images)
+                    {
+                        PictureBox pb = new PictureBox();
+                        pb.ImageLocation = pic.path;
+                        pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                        // A CHANGER
+                        //flpAlbumViewer.Controls.Add(pb);
+                    }*/
+                    refreshPhotoView();
+                }
             }
+            else
+            {
+                btnAddtoAlbum.Enabled = false;
+            }
+            
         }
 
         private void btnLoadAlbum_Click(object sender, EventArgs e)
@@ -189,13 +207,17 @@ namespace ProjetPhotoViewer
 
         private void diaporama_Click(object sender, EventArgs e)
         {
-            if (listViewAlbum.SelectedIndices[0] >= 0)
+            if (listViewAlbum.SelectedItems.Count == 1)
             {
                 diaporama diap = new diaporama(mesalbums[listViewAlbum.SelectedIndices[0]]);
                 if (diap.ShowDialog() == DialogResult.OK)
                 {
 
                 }
+            }
+            else
+            {
+                btnDiapo.Enabled = false;
             }
         }
 
