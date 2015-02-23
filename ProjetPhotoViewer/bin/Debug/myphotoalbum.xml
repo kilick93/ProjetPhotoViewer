@@ -2,6 +2,7 @@
 <ArrayOfAlbum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <album>
     <images />
-    <name>ntm zizi</name>
+    <taille>0</taille>
+    <name>mon album</name>
   </album>
 </ArrayOfAlbum>

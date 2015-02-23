@@ -16,6 +16,7 @@ namespace ProjetPhotoViewer
         {
             images = new List<photo>();
         }
+  
     }
 
     public class photo

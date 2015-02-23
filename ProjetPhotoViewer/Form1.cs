@@ -150,5 +150,18 @@ namespace ProjetPhotoViewer
             }
         }
 
+        private void diaporama_Click(object sender, EventArgs e)
+        {
+            if (listViewAlbum.SelectedIndices[0] >= 0)
+            {
+                diaporama diap = new diaporama(mesalbums[listViewAlbum.SelectedIndices[0]]);
+                if (diap.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
+
+        }
+
     }
 }

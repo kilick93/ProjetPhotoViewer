@@ -33,13 +33,14 @@
             this.columnFilename = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cmsAlbum = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifyAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.btnAddtoAlbum = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnLoadAlbum = new System.Windows.Forms.Button();
             this.flpAlbumViewer = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCreateAlbum = new System.Windows.Forms.Button();
-            this.modifyAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.cmsAlbum.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,14 +68,21 @@
             this.deleteAlbumToolStripMenuItem,
             this.modifyAlbumToolStripMenuItem});
             this.cmsAlbum.Name = "cmsAlbum";
-            this.cmsAlbum.Size = new System.Drawing.Size(153, 70);
+            this.cmsAlbum.Size = new System.Drawing.Size(150, 48);
             // 
             // deleteAlbumToolStripMenuItem
             // 
             this.deleteAlbumToolStripMenuItem.Name = "deleteAlbumToolStripMenuItem";
-            this.deleteAlbumToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteAlbumToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.deleteAlbumToolStripMenuItem.Text = "delete album";
             this.deleteAlbumToolStripMenuItem.Click += new System.EventHandler(this.deleteAlbumToolStripMenuItem_Click);
+            // 
+            // modifyAlbumToolStripMenuItem
+            // 
+            this.modifyAlbumToolStripMenuItem.Name = "modifyAlbumToolStripMenuItem";
+            this.modifyAlbumToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.modifyAlbumToolStripMenuItem.Text = "modify album";
+            this.modifyAlbumToolStripMenuItem.Click += new System.EventHandler(this.modifyAlbumToolStripMenuItem_Click_1);
             // 
             // btnAddtoAlbum
             // 
@@ -119,18 +127,22 @@
             this.btnCreateAlbum.UseVisualStyleBackColor = true;
             this.btnCreateAlbum.Click += new System.EventHandler(this.btnCreateAlbum_Click);
             // 
-            // modifyAlbumToolStripMenuItem
+            // button1
             // 
-            this.modifyAlbumToolStripMenuItem.Name = "modifyAlbumToolStripMenuItem";
-            this.modifyAlbumToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.modifyAlbumToolStripMenuItem.Text = "modify album";
-            this.modifyAlbumToolStripMenuItem.Click += new System.EventHandler(this.modifyAlbumToolStripMenuItem_Click_1);
+            this.button1.Location = new System.Drawing.Point(353, 389);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 21);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Diaporama";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.diaporama_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 423);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCreateAlbum);
             this.Controls.Add(this.flpAlbumViewer);
             this.Controls.Add(this.btnLoadAlbum);
@@ -157,6 +169,7 @@
         private System.Windows.Forms.ContextMenuStrip cmsAlbum;
         private System.Windows.Forms.ToolStripMenuItem deleteAlbumToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifyAlbumToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 
