@@ -60,7 +60,6 @@ namespace ProjetPhotoViewer
             btnDiapo.Enabled = false;
             mesalbums = LoadXmlFile();
             refreshAlbumView();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -90,7 +89,7 @@ namespace ProjetPhotoViewer
                 btnAddtoAlbum.Enabled = true;
                 //Filtre pour ne permettre de ne sélectionner que des photos
                 ofdPhoto.Filter = "Image Files|*.jpg;*.jpeg;*.png";
-                ofdPhoto.Title = "Selectionner une image";
+                ofdPhoto.Title = "Selectionnez une image";
                 //Après avoir choisi la photo, on l'ajoute dans l'album en enregistrant son path
                 if (ofdPhoto.ShowDialog() == DialogResult.OK && listViewAlbum.SelectedIndices[0] >= 0)
                 {
@@ -119,8 +118,7 @@ namespace ProjetPhotoViewer
                 
                 // Création d'un ToolStripMenuItem pour chaque album afin de gérer l'import de photo depuis la base interne via un click droit sur la photo
                 ToolStripMenuItem TestToolStripMenuItem = new ToolStripMenuItem();
-                this.addToAlbumToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            TestToolStripMenuItem});
+                this.addToAlbumToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {TestToolStripMenuItem});
                 TestToolStripMenuItem.Name = a.name;
                 TestToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
                 TestToolStripMenuItem.Text = a.name;
@@ -173,21 +171,24 @@ namespace ProjetPhotoViewer
             picture.ImageSize = new Size(56, 56);
             int i = 0;
             //Si un album est sélectionné
-            if(listViewAlbum.SelectedIndices[0] >= 0)
-            {
-                album display = mesalbums[listViewAlbum.SelectedIndices[0]];
-                //on prend chaque photo de l'album et on les affiche
-                foreach(photo pic in mesalbums[listViewAlbum.SelectedIndices[0]].images)
+            if (listViewAlbum.SelectedItems.Count == 1)
+                if(listViewAlbum.SelectedIndices[0] >= 0)
                 {
-                    ListViewItem item = new ListViewItem();
-                    item.Text = pic.path;
-                    item.ImageIndex = i;
-                    listViewPhoto.Items.Add(item);
-                    i++;
-                    Console.WriteLine(pic.path);
-                    picture.Images.Add(Image.FromFile(pic.path));
+                    album display = mesalbums[listViewAlbum.SelectedIndices[0]];
+                    //on prend chaque photo de l'album et on les affiche
+                    foreach(photo pic in mesalbums[listViewAlbum.SelectedIndices[0]].images)
+                    {
+                        ListViewItem item = new ListViewItem();
+                        item.Text = pic.path;
+                        item.ImageIndex = i;
+                        listViewPhoto.Items.Add(item);
+                        i++;
+                        Console.WriteLine(pic.path);
+                        picture.Images.Add(Image.FromFile(pic.path));
+
+                    
+                    }
                 }
-            }
             listViewPhoto.LargeImageList = picture;
             SaveXmlFile(mesalbums);
         }

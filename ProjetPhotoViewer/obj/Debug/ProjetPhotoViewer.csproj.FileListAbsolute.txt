@@ -12,11 +12,10 @@ C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\P
 C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.exe
 C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.pdb
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.exe.config
-C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.exe
-C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.pdb
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.exe
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.pdb
-C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csprojResolveAssemblyReference.cache
+C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.exe.CodeAnalysisLog.xml
+C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.exe.lastcodeanalysissucceeded
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.createAlbum.resources
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.diaporama.resources
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.MainForm.resources
@@ -24,3 +23,5 @@ C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\Pr
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.ModifyPhotoProperty.resources
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.Properties.Resources.resources
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csproj.GenerateResource.Cache
+C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.exe
+C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.pdb
