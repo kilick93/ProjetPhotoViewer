@@ -56,6 +56,8 @@ namespace ProjetPhotoViewer
             InitializeComponent();
             listViewAlbum.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             this.AllowDrop = true;
+            btnAddtoAlbum.Enabled = false;
+            btnDiapo.Enabled = false;
 
         }
 
