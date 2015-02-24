@@ -49,4 +49,6 @@ C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\obj\Debug\Proje
 =======
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.exe
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.pdb
+C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csprojResolveAssemblyReference.cache
 >>>>>>> f43953797674cbfc772ff539791e77593354576e
+>>>>>>> origin/master

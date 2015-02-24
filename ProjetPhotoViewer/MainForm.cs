@@ -16,6 +16,7 @@ namespace ProjetPhotoViewer
     public partial class MainForm : Form
     {
         List<album> mesalbums;
+        public int index;
         //Chargement des données sauvegardées depuis le fichier myphotoalbum.xml
         public static List<album> LoadXmlFile()
         {
@@ -112,6 +113,16 @@ namespace ProjetPhotoViewer
             {
                 album a = new album();
                 a.name = createA.album.name;
+                
+                ToolStripMenuItem TestToolStripMenuItem = new ToolStripMenuItem();
+                this.addToAlbumToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            TestToolStripMenuItem});
+                TestToolStripMenuItem.Name = a.name;
+                TestToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+                TestToolStripMenuItem.Text = a.name;
+                TestToolStripMenuItem.Click += new System.EventHandler((sendera, ea) => TestToolStripMenuItem_Click(sender, e, a));
+
+
                 //ajout de l'album qui vient d'être créé à la liste mesalbums
                 mesalbums.Add(a);
                 //affichage de chaque album dans mesalbums dans la listviewalbum
@@ -247,6 +258,22 @@ namespace ProjetPhotoViewer
             refreshPhotoView();
         }
 
+        private void TestToolStripMenuItem_Click(object sender, EventArgs e, album a)
+        {
+            Console.WriteLine(a.name);
+            for (int i = 0; i < mesalbums.Count; i++ )
+            {
+                if(mesalbums[i].name== a.name)
+                {
+                    index = i;
+                }
+            }
+            mesalbums[index].images.Add(mesalbums[listViewAlbum.SelectedIndices[0]].images[listViewPhoto.SelectedIndices[0]]);
+            refreshPhotoView();
+
+
+        }
+
         private void listViewAlbum_ItemDrag(object sender, ItemDragEventArgs e)
         {
 
@@ -341,6 +368,5 @@ namespace ProjetPhotoViewer
             if (this.listViewPhoto.SelectedItems == null) return;
             this.listViewPhoto.DoDragDrop(this.listViewPhoto.SelectedItems, DragDropEffects.Move);
         }
-
     }
 }

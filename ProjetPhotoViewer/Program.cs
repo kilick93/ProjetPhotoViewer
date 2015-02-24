@@ -9,7 +9,6 @@ namespace ProjetPhotoViewer
     public class album
     {
         public string name { get; set; }
-
         public List<photo> images;
 
         public album()
