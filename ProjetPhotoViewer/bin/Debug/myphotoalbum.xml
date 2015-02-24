@@ -3,10 +3,19 @@
   <album>
     <images>
       <photo>
-        <path>C:\Users\Robin\Desktop\12CZ\1303-03 12 Animals.jpg</path>
+        <path>C:\Users\Pascal\Pictures\2dqnbqr.jpg</path>
         <rating>0</rating>
       </photo>
     </images>
     <name>mon album</name>
+  </album>
+  <album>
+    <images>
+      <photo>
+        <path>C:\Users\Pascal\Pictures\2dqnbqr.jpg</path>
+        <rating>0</rating>
+      </photo>
+    </images>
+    <name>test</name>
   </album>
 </ArrayOfAlbum>

@@ -43,6 +43,7 @@
             this.modifyPhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletePhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDiapo = new System.Windows.Forms.Button();
+            this.addToAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsAlbum.SuspendLayout();
             this.cmsPhoto.SuspendLayout();
             this.SuspendLayout();
@@ -128,21 +129,22 @@
             // 
             this.cmsPhoto.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.modifyPhotoToolStripMenuItem,
-            this.deletePhotoToolStripMenuItem});
+            this.deletePhotoToolStripMenuItem,
+            this.addToAlbumToolStripMenuItem});
             this.cmsPhoto.Name = "cmsPhoto";
-            this.cmsPhoto.Size = new System.Drawing.Size(148, 48);
+            this.cmsPhoto.Size = new System.Drawing.Size(153, 92);
             // 
             // modifyPhotoToolStripMenuItem
             // 
             this.modifyPhotoToolStripMenuItem.Name = "modifyPhotoToolStripMenuItem";
-            this.modifyPhotoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.modifyPhotoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.modifyPhotoToolStripMenuItem.Text = "modify photo";
             this.modifyPhotoToolStripMenuItem.Click += new System.EventHandler(this.modifyPhotoToolStripMenuItem_Click);
             // 
             // deletePhotoToolStripMenuItem
             // 
             this.deletePhotoToolStripMenuItem.Name = "deletePhotoToolStripMenuItem";
-            this.deletePhotoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.deletePhotoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deletePhotoToolStripMenuItem.Text = "delete photo";
             this.deletePhotoToolStripMenuItem.Click += new System.EventHandler(this.deletePhotoToolStripMenuItem_Click);
             // 
@@ -155,6 +157,12 @@
             this.btnDiapo.Text = "Diaporama";
             this.btnDiapo.UseVisualStyleBackColor = true;
             this.btnDiapo.Click += new System.EventHandler(this.diaporama_Click);
+            // 
+            // addToAlbumToolStripMenuItem
+            // 
+            this.addToAlbumToolStripMenuItem.Name = "addToAlbumToolStripMenuItem";
+            this.addToAlbumToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addToAlbumToolStripMenuItem.Text = "add to album";
             // 
             // MainForm
             // 
@@ -191,6 +199,7 @@
         private System.Windows.Forms.ContextMenuStrip cmsPhoto;
         private System.Windows.Forms.ToolStripMenuItem modifyPhotoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deletePhotoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToAlbumToolStripMenuItem;
     }
 }
 
