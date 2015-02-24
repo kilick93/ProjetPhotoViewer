@@ -118,9 +118,7 @@ namespace ProjetPhotoViewer
             if (!this.fullScreen.IsFullScreen)
             {
                 // Cacher les boutons et afficher les diapos en plein ecran
-                this.btnPrec.Visible = false;
-                this.btnSuiv.Visible = false;
-                this.btnDiap.Visible = false;
+                this.grpBoxDiap.Visible = false;
                 this.btnFullScreen.Visible = false;
                 this.PanelDiap.Dock = DockStyle.Fill;
 
@@ -142,9 +140,7 @@ namespace ProjetPhotoViewer
                 if (this.fullScreen.IsFullScreen)
                 {
                     // Reafficher les boutons et la page diapo
-                    this.btnPrec.Visible = true;
-                    this.btnSuiv.Visible = true;
-                    this.btnDiap.Visible = true;
+                    this.grpBoxDiap.Visible = true;
                     this.btnFullScreen.Visible = true;
                     this.PanelDiap.Dock = DockStyle.None;
 

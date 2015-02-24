@@ -36,8 +36,10 @@
             this.btnDiap = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnFullScreen = new System.Windows.Forms.Button();
+            this.grpBoxDiap = new System.Windows.Forms.GroupBox();
             this.PanelDiap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxDiap)).BeginInit();
+            this.grpBoxDiap.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelDiap
@@ -62,9 +64,9 @@
             // 
             // btnPrec
             // 
-            this.btnPrec.Location = new System.Drawing.Point(67, 558);
+            this.btnPrec.Location = new System.Drawing.Point(74, 10);
             this.btnPrec.Name = "btnPrec";
-            this.btnPrec.Size = new System.Drawing.Size(201, 28);
+            this.btnPrec.Size = new System.Drawing.Size(216, 39);
             this.btnPrec.TabIndex = 1;
             this.btnPrec.Text = "<< Précédent";
             this.btnPrec.UseVisualStyleBackColor = true;
@@ -72,9 +74,9 @@
             // 
             // btnSuiv
             // 
-            this.btnSuiv.Location = new System.Drawing.Point(911, 558);
+            this.btnSuiv.Location = new System.Drawing.Point(915, 10);
             this.btnSuiv.Name = "btnSuiv";
-            this.btnSuiv.Size = new System.Drawing.Size(223, 28);
+            this.btnSuiv.Size = new System.Drawing.Size(235, 39);
             this.btnSuiv.TabIndex = 2;
             this.btnSuiv.Text = "Suivant >>";
             this.btnSuiv.UseVisualStyleBackColor = true;
@@ -82,9 +84,9 @@
             // 
             // btnDiap
             // 
-            this.btnDiap.Location = new System.Drawing.Point(627, 558);
+            this.btnDiap.Location = new System.Drawing.Point(637, 10);
             this.btnDiap.Name = "btnDiap";
-            this.btnDiap.Size = new System.Drawing.Size(220, 28);
+            this.btnDiap.Size = new System.Drawing.Size(230, 40);
             this.btnDiap.TabIndex = 3;
             this.btnDiap.Text = "Lancer le diaporama";
             this.btnDiap.UseVisualStyleBackColor = true;
@@ -96,33 +98,46 @@
             // 
             // btnFullScreen
             // 
-            this.btnFullScreen.Location = new System.Drawing.Point(328, 558);
+            this.btnFullScreen.Location = new System.Drawing.Point(338, 9);
             this.btnFullScreen.Name = "btnFullScreen";
-            this.btnFullScreen.Size = new System.Drawing.Size(240, 28);
+            this.btnFullScreen.Size = new System.Drawing.Size(250, 40);
             this.btnFullScreen.TabIndex = 4;
             this.btnFullScreen.Text = "Full Screen";
             this.btnFullScreen.UseVisualStyleBackColor = true;
             this.btnFullScreen.Click += new System.EventHandler(this.fullscreen_Click);
             // 
+            // grpBoxDiap
+            // 
+            this.grpBoxDiap.Controls.Add(this.btnSuiv);
+            this.grpBoxDiap.Controls.Add(this.btnDiap);
+            this.grpBoxDiap.Controls.Add(this.btnFullScreen);
+            this.grpBoxDiap.Controls.Add(this.btnPrec);
+            this.grpBoxDiap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxDiap.Location = new System.Drawing.Point(12, 558);
+            this.grpBoxDiap.Name = "grpBoxDiap";
+            this.grpBoxDiap.Size = new System.Drawing.Size(1156, 50);
+            this.grpBoxDiap.TabIndex = 5;
+            this.grpBoxDiap.TabStop = false;
+            this.grpBoxDiap.Text = "Diaporama";
+            // 
             // diaporama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 598);
-            this.Controls.Add(this.btnFullScreen);
-            this.Controls.Add(this.btnDiap);
-            this.Controls.Add(this.btnSuiv);
-            this.Controls.Add(this.btnPrec);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(1169, 622);
+            this.Controls.Add(this.grpBoxDiap);
             this.Controls.Add(this.PanelDiap);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "diaporama";
-            this.Text = "Form2";
+            this.Text = "Diaporama Viewer";
             this.Load += new System.EventHandler(this.diaporama_Load);
             this.PanelDiap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pboxDiap)).EndInit();
+            this.grpBoxDiap.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +152,6 @@
         private System.Windows.Forms.Button btnDiap;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnFullScreen;
+        private System.Windows.Forms.GroupBox grpBoxDiap;
     }
 }

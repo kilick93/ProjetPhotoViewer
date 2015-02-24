@@ -42,10 +42,14 @@
             this.cmsPhoto = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modifyPhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletePhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDiapo = new System.Windows.Forms.Button();
             this.addToAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDiapo = new System.Windows.Forms.Button();
+            this.grpBoxAlbum = new System.Windows.Forms.GroupBox();
+            this.grpBoxPhoto = new System.Windows.Forms.GroupBox();
             this.cmsAlbum.SuspendLayout();
             this.cmsPhoto.SuspendLayout();
+            this.grpBoxAlbum.SuspendLayout();
+            this.grpBoxPhoto.SuspendLayout();
             this.SuspendLayout();
             // 
             // listViewAlbum
@@ -54,10 +58,10 @@
             this.listViewAlbum.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnFilename});
             this.listViewAlbum.ContextMenuStrip = this.cmsAlbum;
-            this.listViewAlbum.Location = new System.Drawing.Point(13, 13);
+            this.listViewAlbum.Location = new System.Drawing.Point(10, 19);
             this.listViewAlbum.MultiSelect = false;
             this.listViewAlbum.Name = "listViewAlbum";
-            this.listViewAlbum.Size = new System.Drawing.Size(121, 370);
+            this.listViewAlbum.Size = new System.Drawing.Size(122, 329);
             this.listViewAlbum.TabIndex = 0;
             this.listViewAlbum.UseCompatibleStateImageBehavior = false;
             this.listViewAlbum.View = System.Windows.Forms.View.List;
@@ -72,6 +76,7 @@
             // columnFilename
             // 
             this.columnFilename.Text = "Filename";
+            this.columnFilename.Width = 120;
             // 
             // cmsAlbum
             // 
@@ -79,29 +84,29 @@
             this.deleteAlbumToolStripMenuItem,
             this.modifyAlbumToolStripMenuItem});
             this.cmsAlbum.Name = "cmsAlbum";
-            this.cmsAlbum.Size = new System.Drawing.Size(150, 48);
+            this.cmsAlbum.Size = new System.Drawing.Size(173, 48);
             // 
             // deleteAlbumToolStripMenuItem
             // 
             this.deleteAlbumToolStripMenuItem.Name = "deleteAlbumToolStripMenuItem";
-            this.deleteAlbumToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.deleteAlbumToolStripMenuItem.Text = "delete album";
+            this.deleteAlbumToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.deleteAlbumToolStripMenuItem.Text = "Supprimer l\'album";
             this.deleteAlbumToolStripMenuItem.Click += new System.EventHandler(this.deleteAlbumToolStripMenuItem_Click);
             // 
             // modifyAlbumToolStripMenuItem
             // 
             this.modifyAlbumToolStripMenuItem.Name = "modifyAlbumToolStripMenuItem";
-            this.modifyAlbumToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.modifyAlbumToolStripMenuItem.Text = "modify album";
+            this.modifyAlbumToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.modifyAlbumToolStripMenuItem.Text = "Modifier l\'album";
             this.modifyAlbumToolStripMenuItem.Click += new System.EventHandler(this.modifyAlbumToolStripMenuItem_Click_1);
             // 
             // btnAddtoAlbum
             // 
-            this.btnAddtoAlbum.Location = new System.Drawing.Point(141, 388);
+            this.btnAddtoAlbum.Location = new System.Drawing.Point(6, 354);
             this.btnAddtoAlbum.Name = "btnAddtoAlbum";
-            this.btnAddtoAlbum.Size = new System.Drawing.Size(117, 23);
+            this.btnAddtoAlbum.Size = new System.Drawing.Size(136, 39);
             this.btnAddtoAlbum.TabIndex = 2;
-            this.btnAddtoAlbum.Text = "ajouter dans l\'album";
+            this.btnAddtoAlbum.Text = "Ajouter Photo";
             this.btnAddtoAlbum.UseVisualStyleBackColor = true;
             this.btnAddtoAlbum.Click += new System.EventHandler(this.btnAddtoAlbum_Click);
             // 
@@ -113,11 +118,11 @@
             // 
             this.btnCreateAlbum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCreateAlbum.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnCreateAlbum.Location = new System.Drawing.Point(13, 388);
+            this.btnCreateAlbum.Location = new System.Drawing.Point(10, 354);
             this.btnCreateAlbum.Name = "btnCreateAlbum";
-            this.btnCreateAlbum.Size = new System.Drawing.Size(121, 23);
+            this.btnCreateAlbum.Size = new System.Drawing.Size(122, 39);
             this.btnCreateAlbum.TabIndex = 5;
-            this.btnCreateAlbum.Text = "Create Album";
+            this.btnCreateAlbum.Text = "Créer un album";
             this.btnCreateAlbum.UseVisualStyleBackColor = true;
             this.btnCreateAlbum.Click += new System.EventHandler(this.btnCreateAlbum_Click);
             // 
@@ -125,9 +130,9 @@
             // 
             this.listViewPhoto.AllowDrop = true;
             this.listViewPhoto.ContextMenuStrip = this.cmsPhoto;
-            this.listViewPhoto.Location = new System.Drawing.Point(141, 13);
+            this.listViewPhoto.Location = new System.Drawing.Point(8, 19);
             this.listViewPhoto.Name = "listViewPhoto";
-            this.listViewPhoto.Size = new System.Drawing.Size(497, 370);
+            this.listViewPhoto.Size = new System.Drawing.Size(458, 329);
             this.listViewPhoto.TabIndex = 6;
             this.listViewPhoto.UseCompatibleStateImageBehavior = false;
             this.listViewPhoto.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.listViewPhoto_ItemDrag);
@@ -145,53 +150,78 @@
             this.deletePhotoToolStripMenuItem,
             this.addToAlbumToolStripMenuItem});
             this.cmsPhoto.Name = "cmsPhoto";
-            this.cmsPhoto.Size = new System.Drawing.Size(153, 92);
+            this.cmsPhoto.Size = new System.Drawing.Size(177, 70);
             // 
             // modifyPhotoToolStripMenuItem
             // 
             this.modifyPhotoToolStripMenuItem.Name = "modifyPhotoToolStripMenuItem";
-            this.modifyPhotoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.modifyPhotoToolStripMenuItem.Text = "modify photo";
+            this.modifyPhotoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.modifyPhotoToolStripMenuItem.Text = "Modifier la photo";
             this.modifyPhotoToolStripMenuItem.Click += new System.EventHandler(this.modifyPhotoToolStripMenuItem_Click);
             // 
             // deletePhotoToolStripMenuItem
             // 
             this.deletePhotoToolStripMenuItem.Name = "deletePhotoToolStripMenuItem";
-            this.deletePhotoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deletePhotoToolStripMenuItem.Text = "delete photo";
+            this.deletePhotoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.deletePhotoToolStripMenuItem.Text = "Supprimer la photo";
             this.deletePhotoToolStripMenuItem.Click += new System.EventHandler(this.deletePhotoToolStripMenuItem_Click);
+            // 
+            // addToAlbumToolStripMenuItem
+            // 
+            this.addToAlbumToolStripMenuItem.Name = "addToAlbumToolStripMenuItem";
+            this.addToAlbumToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.addToAlbumToolStripMenuItem.Text = "Ajouter à l\'album";
             // 
             // btnDiapo
             // 
-            this.btnDiapo.Location = new System.Drawing.Point(264, 389);
+            this.btnDiapo.Location = new System.Drawing.Point(159, 354);
             this.btnDiapo.Name = "btnDiapo";
-            this.btnDiapo.Size = new System.Drawing.Size(91, 22);
+            this.btnDiapo.Size = new System.Drawing.Size(134, 39);
             this.btnDiapo.TabIndex = 8;
             this.btnDiapo.Text = "Diaporama";
             this.btnDiapo.UseVisualStyleBackColor = true;
             this.btnDiapo.Click += new System.EventHandler(this.diaporama_Click);
             // 
-            // addToAlbumToolStripMenuItem
+            // grpBoxAlbum
             // 
-            this.addToAlbumToolStripMenuItem.Name = "addToAlbumToolStripMenuItem";
-            this.addToAlbumToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addToAlbumToolStripMenuItem.Text = "add to album";
+            this.grpBoxAlbum.Controls.Add(this.listViewAlbum);
+            this.grpBoxAlbum.Controls.Add(this.btnCreateAlbum);
+            this.grpBoxAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxAlbum.Location = new System.Drawing.Point(13, 12);
+            this.grpBoxAlbum.Name = "grpBoxAlbum";
+            this.grpBoxAlbum.Size = new System.Drawing.Size(138, 399);
+            this.grpBoxAlbum.TabIndex = 9;
+            this.grpBoxAlbum.TabStop = false;
+            this.grpBoxAlbum.Text = "Albums";
+            // 
+            // grpBoxPhoto
+            // 
+            this.grpBoxPhoto.Controls.Add(this.listViewPhoto);
+            this.grpBoxPhoto.Controls.Add(this.btnAddtoAlbum);
+            this.grpBoxPhoto.Controls.Add(this.btnDiapo);
+            this.grpBoxPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBoxPhoto.Location = new System.Drawing.Point(166, 12);
+            this.grpBoxPhoto.Name = "grpBoxPhoto";
+            this.grpBoxPhoto.Size = new System.Drawing.Size(472, 399);
+            this.grpBoxPhoto.TabIndex = 10;
+            this.grpBoxPhoto.TabStop = false;
+            this.grpBoxPhoto.Text = "Photos";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(650, 423);
-            this.Controls.Add(this.btnDiapo);
-            this.Controls.Add(this.listViewPhoto);
-            this.Controls.Add(this.btnCreateAlbum);
-            this.Controls.Add(this.btnAddtoAlbum);
-            this.Controls.Add(this.listViewAlbum);
+            this.Controls.Add(this.grpBoxPhoto);
+            this.Controls.Add(this.grpBoxAlbum);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Projet Photo Viewer";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.cmsAlbum.ResumeLayout(false);
             this.cmsPhoto.ResumeLayout(false);
+            this.grpBoxAlbum.ResumeLayout(false);
+            this.grpBoxPhoto.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -213,6 +243,8 @@
         private System.Windows.Forms.ToolStripMenuItem modifyPhotoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deletePhotoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToAlbumToolStripMenuItem;
+        private System.Windows.Forms.GroupBox grpBoxAlbum;
+        private System.Windows.Forms.GroupBox grpBoxPhoto;
     }
 }
 

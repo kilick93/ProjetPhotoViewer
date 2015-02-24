@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfAlbum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <album>
-    <images>
-      <photo>
-<<<<<<< HEAD
-        <path>C:\Users\Philippe\Desktop\Mathieu\Marine\Studio Lenoir\_MG_2032.JPG</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Philippe\Desktop\Mathieu\Marine\Studio Lenoir\_MG_2033.JPG</path>
-=======
-        <path>C:\Users\Pascal\Pictures\2dqnbqr.jpg</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Pascal\Pictures\280938.jpg</path>
->>>>>>> f17852ff89282a02fd10f722c08bed131d26f9b5
-        <rating>0</rating>
-      </photo>
-    </images>
-    <name>mon album</name>
-  </album>
-  <album>
-    <images>
-      <photo>
-        <path>C:\Users\Pascal\Pictures\2dqnbqr.jpg</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Pascal\Pictures\280938.jpg</path>
-        <rating>0</rating>
-      </photo>
-    </images>
-    <name>test</name>
+    <images />
+    <name>Mon Album</name>
   </album>
 </ArrayOfAlbum>
