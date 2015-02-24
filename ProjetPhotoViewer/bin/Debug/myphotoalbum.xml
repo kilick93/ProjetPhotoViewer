@@ -3,51 +3,7 @@
   <album>
     <images>
       <photo>
-        <path>C:\Users\Robin\Desktop\12CZ\cheval.png</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Robin\Desktop\12CZ\2791230_105118045000_2.png</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\wamp\www\WebArenaGroupSI4-06-BG\app\webroot\img\49.jpg</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\wamp\www\WebArenaGroupSI4-06-BG\app\webroot\img\50.jpg</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Robin\Desktop\12CZ\cochon.png</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Robin\Desktop\12CZ\lapin.png</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Robin\Desktop\12CZ\mouton.png</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Robin\Desktop\12CZ\poulet.png</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Robin\Desktop\12CZ\serpent.png</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Robin\Desktop\12CZ\singe.png</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Robin\Desktop\12CZ\tigre.png</path>
-        <rating>0</rating>
-      </photo>
-      <photo>
-        <path>C:\Users\Robin\Desktop\12CZ\vache.png</path>
+        <path>C:\Users\Robin\Desktop\12CZ\dragon.png</path>
         <rating>0</rating>
       </photo>
     </images>
@@ -55,15 +11,6 @@
   </album>
   <album>
     <images />
-    <name>2</name>
-  </album>
-  <album>
-    <images>
-      <photo>
-        <path>C:\wamp\www\WebArenaGroupSI4-06-BG\app\webroot\img\50.jpg</path>
-        <rating>0</rating>
-      </photo>
-    </images>
-    <name>alal</name>
+    <name>al2</name>
   </album>
 </ArrayOfAlbum>

@@ -124,7 +124,6 @@ namespace ProjetPhotoViewer
                 TestToolStripMenuItem.Text = a.name;
                 TestToolStripMenuItem.Click += new System.EventHandler((sendera, ea) => TestToolStripMenuItem_Click(sender, e, a));
 
-
                 //ajout de l'album qui vient d'être créé à la liste mesalbums
                 mesalbums.Add(a);
                 //affichage de chaque album dans mesalbums dans la listviewalbum
@@ -181,11 +180,21 @@ namespace ProjetPhotoViewer
                         ListViewItem item = new ListViewItem();
                         item.Text = pic.path;
                         item.ImageIndex = i;
+                        
+                        Console.WriteLine(pic.path);
+                        try
+                        {
+                            picture.Images.Add(Image.FromFile(pic.path));
+                        }
+                        catch(FileNotFoundException)
+                        {
+                            mesalbums[listViewAlbum.SelectedIndices[0]].images.RemoveAt(i);
+                            refreshPhotoView();
+                            return;
+
+                        }
                         listViewPhoto.Items.Add(item);
                         i++;
-                        Console.WriteLine(pic.path);
-                        picture.Images.Add(Image.FromFile(pic.path));
-
                     
                     }
                 }
