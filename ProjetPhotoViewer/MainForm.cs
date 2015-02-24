@@ -336,8 +336,11 @@ namespace ProjetPhotoViewer
                     photo myphoto = new photo();
                     //myphoto.path = file;
                     myphoto.path = System.IO.Path.GetFullPath(file);
-                    mesalbums[listViewAlbum.SelectedIndices[0]].images.Add(myphoto);
-                    refreshPhotoView();
+                    if (listViewAlbum.SelectedItems.Count == 1)
+                    {
+                        mesalbums[listViewAlbum.SelectedIndices[0]].images.Add(myphoto);
+                        refreshPhotoView();
+                    }
                 }
             }
             catch (NullReferenceException)
