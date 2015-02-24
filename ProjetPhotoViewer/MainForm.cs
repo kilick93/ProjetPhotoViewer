@@ -86,7 +86,6 @@ namespace ProjetPhotoViewer
                 btnAddtoAlbum.Enabled = true;
                 //Filtre pour ne permettre de ne sélectionner que des photos
                 ofdPhoto.Filter = "Image Files|*.jpg;*.jpeg;*.png";
-                ofdPhoto.InitialDirectory = @"C:\";
                 ofdPhoto.Title = "Selectionner une image";
                 //Après avoir choisi la photo, on l'ajoute dans l'album en enregistrant son path
                 if (ofdPhoto.ShowDialog() == DialogResult.OK && listViewAlbum.SelectedIndices[0] >= 0)
@@ -114,6 +113,7 @@ namespace ProjetPhotoViewer
                 album a = new album();
                 a.name = createA.album.name;
                 
+                // Création d'un ToolStripMenuItem pour chaque album afin de gérer l'import de photo depuis la base interne via un click droit sur la photo
                 ToolStripMenuItem TestToolStripMenuItem = new ToolStripMenuItem();
                 this.addToAlbumToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             TestToolStripMenuItem});
@@ -258,6 +258,8 @@ namespace ProjetPhotoViewer
             refreshPhotoView();
         }
 
+
+        // Fonction gérant le click Ajouter à l'album pour une photo d'un album A à un album B. Récupère l'album a en paramètre
         private void TestToolStripMenuItem_Click(object sender, EventArgs e, album a)
         {
             Console.WriteLine(a.name);
