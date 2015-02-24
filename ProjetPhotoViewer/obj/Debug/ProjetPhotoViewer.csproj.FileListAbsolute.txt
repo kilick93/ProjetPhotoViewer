@@ -32,6 +32,25 @@ C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\Pr
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.ModifyPhotoProperty.resources
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.Properties.Resources.resources
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csproj.GenerateResource.Cache
+<<<<<<< HEAD
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.exe.config
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.exe
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.pdb
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.exe
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\bin\Debug\ProjetPhotoViewer.pdb
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csprojResolveAssemblyReference.cache
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.createAlbum.resources
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.diaporama.resources
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.MainForm.resources
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.modifyAlbum.resources
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.ModifyPhotoProperty.resources
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.Properties.Resources.resources
+C:\Users\Philippe\Desktop\C#\projetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csproj.GenerateResource.Cache
+=======
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.exe
 C:\Users\Robin\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.pdb
+<<<<<<< HEAD
 C:\Users\Pascal\Documents\GitHub\ProjetPhotoViewer\ProjetPhotoViewer\obj\Debug\ProjetPhotoViewer.csprojResolveAssemblyReference.cache
+=======
+>>>>>>> f43953797674cbfc772ff539791e77593354576e
+>>>>>>> origin/master

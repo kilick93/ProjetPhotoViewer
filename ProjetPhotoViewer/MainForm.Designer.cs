@@ -42,6 +42,7 @@
             this.cmsPhoto = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modifyPhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletePhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDiapo = new System.Windows.Forms.Button();
             this.addToAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsAlbum.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             // listViewAlbum
             // 
+            this.listViewAlbum.AllowDrop = true;
             this.listViewAlbum.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnFilename});
             this.listViewAlbum.ContextMenuStrip = this.cmsAlbum;
@@ -60,8 +62,13 @@
             this.listViewAlbum.TabIndex = 0;
             this.listViewAlbum.UseCompatibleStateImageBehavior = false;
             this.listViewAlbum.View = System.Windows.Forms.View.List;
+            this.listViewAlbum.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.listViewAlbum_ItemDrag);
             this.listViewAlbum.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             this.listViewAlbum.Click += new System.EventHandler(this.listViewAlbum_Click);
+            this.listViewAlbum.DragDrop += new System.Windows.Forms.DragEventHandler(this.listViewAlbum_DragDrop);
+            this.listViewAlbum.DragEnter += new System.Windows.Forms.DragEventHandler(this.listViewAlbum_DragEnter);
+            this.listViewAlbum.DragOver += new System.Windows.Forms.DragEventHandler(this.listViewAlbum_DragOver);
+            this.listViewAlbum.DragLeave += new System.EventHandler(this.listViewAlbum_DragLeave);
             // 
             // columnFilename
             // 
@@ -117,13 +124,21 @@
             // 
             // listViewPhoto
             // 
+            this.listViewPhoto.AllowDrop = true;
             this.listViewPhoto.ContextMenuStrip = this.cmsPhoto;
             this.listViewPhoto.Location = new System.Drawing.Point(141, 13);
             this.listViewPhoto.Name = "listViewPhoto";
             this.listViewPhoto.Size = new System.Drawing.Size(497, 370);
             this.listViewPhoto.TabIndex = 6;
             this.listViewPhoto.UseCompatibleStateImageBehavior = false;
+            this.listViewPhoto.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.listViewPhoto_ItemDrag);
             this.listViewPhoto.SelectedIndexChanged += new System.EventHandler(this.listViewPhoto_SelectedIndexChanged);
+
+            this.listViewPhoto.DragDrop += new System.Windows.Forms.DragEventHandler(this.listViewPhoto_DragDrop);
+            this.listViewPhoto.DragEnter += new System.Windows.Forms.DragEventHandler(this.listViewPhoto_DragEnter);
+            this.listViewPhoto.DragOver += new System.Windows.Forms.DragEventHandler(this.listViewPhoto_DragOver);
+            this.listViewPhoto.DragLeave += new System.EventHandler(this.listViewPhoto_DragLeave);
+
             // 
             // cmsPhoto
             // 
@@ -148,6 +163,21 @@
             this.deletePhotoToolStripMenuItem.Text = "delete photo";
             this.deletePhotoToolStripMenuItem.Click += new System.EventHandler(this.deletePhotoToolStripMenuItem_Click);
             // 
+/*
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(345, 388);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 7;
+            this.btnRefresh.Text = "refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnDiapo
+            // 
+            this.btnDiapo.Location = new System.Drawing.Point(426, 388);
+*/
             // btnDiapo
             // 
             this.btnDiapo.Location = new System.Drawing.Point(264, 389);

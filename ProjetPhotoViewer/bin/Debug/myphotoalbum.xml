@@ -3,7 +3,11 @@
   <album>
     <images>
       <photo>
+<<<<<<< HEAD
         <path>C:\Users\Pascal\Pictures\2dqnbqr.jpg</path>
+=======
+        <path>C:\Users\Philippe\Desktop\Mathieu\Marine\Studio Lenoir\_MG_2064.JPG</path>
+>>>>>>> origin/master
         <rating>0</rating>
       </photo>
     </images>
