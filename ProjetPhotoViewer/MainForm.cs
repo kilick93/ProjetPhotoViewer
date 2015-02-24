@@ -58,6 +58,8 @@ namespace ProjetPhotoViewer
             this.AllowDrop = true;
             btnAddtoAlbum.Enabled = false;
             btnDiapo.Enabled = false;
+            mesalbums = LoadXmlFile();
+            refreshAlbumView();
 
         }
 
