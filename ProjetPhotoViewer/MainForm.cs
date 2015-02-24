@@ -258,7 +258,6 @@ namespace ProjetPhotoViewer
             refreshPhotoView();
         }
 
-<<<<<<< HEAD
         private void TestToolStripMenuItem_Click(object sender, EventArgs e, album a)
         {
             Console.WriteLine(a.name);
@@ -275,7 +274,6 @@ namespace ProjetPhotoViewer
 
         }
 
-=======
         private void listViewAlbum_ItemDrag(object sender, ItemDragEventArgs e)
         {
 
@@ -354,7 +352,5 @@ namespace ProjetPhotoViewer
         {
 
         }
->>>>>>> origin/master
-
     }
 }
