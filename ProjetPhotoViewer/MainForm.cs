@@ -297,15 +297,25 @@ namespace ProjetPhotoViewer
         private void listViewPhoto_DragDrop(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            foreach (string file in files)
-            {
-                //listViewPhoto.Items.Add(file);
-                photo myphoto = new photo();
-                //myphoto.path = file;
-                myphoto.path = System.IO.Path.GetFullPath(file);
-                mesalbums[listViewAlbum.SelectedIndices[0]].images.Add(myphoto);
-                refreshPhotoView();
+            try
+           {
+                foreach (string file in files)
+                {
+                    //listViewPhoto.Items.Add(file);
+                    photo myphoto = new photo();
+                    //myphoto.path = file;
+                    myphoto.path = System.IO.Path.GetFullPath(file);
+                    mesalbums[listViewAlbum.SelectedIndices[0]].images.Add(myphoto);
+                    refreshPhotoView();
+                }
             }
+            catch (NullReferenceException)
+           {
+               return;
+           }
+
+         //   Point point = listViewPhoto.PointToClient(new Point(e.X, e.Y));
+            //int index = this.listViewPhoto.TabIndex(point);
         }
 
         private void listViewPhoto_DragEnter(object sender, DragEventArgs e)
@@ -323,7 +333,13 @@ namespace ProjetPhotoViewer
 
         private void listViewPhoto_DragOver(object sender, DragEventArgs e)
         {
+            e.Effect = DragDropEffects.Move;
+        }
 
+        private void listViewPhoto_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (this.listViewPhoto.SelectedItems == null) return;
+            this.listViewPhoto.DoDragDrop(this.listViewPhoto.SelectedItems, DragDropEffects.Move);
         }
 
     }
